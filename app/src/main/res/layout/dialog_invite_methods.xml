@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fully_transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10dp"
+        android:layout_margin="@dimen/dialog_content_margin"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/inner_heading_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Here's how to invite and earns" />
+
+        <TextView
+            android:gravity="left"
+            style="@style/content_text_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:text="Share the code below or ask them to enter it after they signUp. Your coupon will appear after their first ride" />
+
+        <Button
+            style="@style/form_submit_button"
+            android:id="@+id/got_it"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Got it" />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/dialog_close_btn"
+        android:id="@+id/invite_method_cut_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

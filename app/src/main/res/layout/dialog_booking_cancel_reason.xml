@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fully_transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/form_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dialog_content_margin"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--        <ImageButton-->
+            <!--            android:id="@+id/bidCutBtn"-->
+            <!--            style="@style/form_cut_icon_button"-->
+            <!--            android:layout_marginRight="@dimen/dimen_10dp" />-->
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/sub_heading_large_text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking Cancel" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/content_text_dark_gray1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/booking_cancel_msg_1"
+            android:layout_marginLeft="@dimen/top_margin_left"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    style="@style/content_text_dark_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plan_changed">
+                </com.google.android.material.radiobutton.MaterialRadioButton>
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    style="@style/content_text_dark_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Driver_denied_duty">
+                </com.google.android.material.radiobutton.MaterialRadioButton>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    style="@style/content_text_dark_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unable_to_contact_driver">
+                </com.google.android.material.radiobutton.MaterialRadioButton>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    style="@style/content_text_dark_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_account_is_not_listed">
+                </com.google.android.material.radiobutton.MaterialRadioButton></RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialog_bookingCancelReason_dontCancel"
+                style="@style/medium_button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dont_cancel"
+                android:layout_margin="@dimen/dp_4"/>
+
+            <Button
+                android:id="@+id/dialog_bookingCancelReason_cancel"
+                style="@style/medium_button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel_ride"
+                android:layout_margin="@dimen/dp_4"
+                android:backgroundTint="@color/red"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/dialog_close_btn"
+        android:id="@+id/dialog_bookingCancelReasonCutBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fully_transparent"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout18"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10dp"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/unit_dialog_cut_btn"-->
+            <!--                style="@style/form_cut_icon_button"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_weight="0.1"></ImageView>-->
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/inner_heading_text_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_weight="0.8"
+                android:text="Select Vehicle Type" />
+        </LinearLayout>
+
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/rv_dialog_facilityList"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content" />-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        style="@style/right_side_radio_with_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Load"
+                        android:drawableLeft="@drawable/ic_baseline_pedal_bike_24"
+                        android:drawablePadding="10dp"/>
+
+                    <RadioButton
+                        style="@style/right_side_radio_with_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mini Truck"
+                        android:drawableLeft="@drawable/ic_baseline_pedal_bike_24"
+                        android:drawablePadding="10dp"/>
+
+                    <RadioButton
+                        style="@style/right_side_radio_with_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Truck"
+                        android:drawableLeft="@drawable/ic_baseline_pedal_bike_24"
+                        android:drawablePadding="10dp"/>
+
+                    <RadioButton
+                        style="@style/right_side_radio_with_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Trala"
+                        android:drawableLeft="@drawable/ic_baseline_pedal_bike_24"
+                        android:drawablePadding="10dp"/>
+
+                    <RadioButton
+                        style="@style/right_side_radio_with_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Trala"
+                        android:drawableLeft="@drawable/ic_baseline_pedal_bike_24"
+                        android:drawablePadding="10dp"/>
+
+                    <RadioButton
+                        style="@style/right_side_radio_with_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dumper"
+                        android:drawableLeft="@drawable/ic_baseline_pedal_bike_24"
+                        android:drawablePadding="10dp"/>
+
+                    <RadioButton
+                        style="@style/right_side_radio_with_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jugad"
+                        android:drawableLeft="@drawable/ic_baseline_pedal_bike_24"
+                        android:drawablePadding="10dp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/goodsVehilceTye_dialog_select_button"
+            style="@style/medium_button_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select" />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/dialog_close_btn"
+        android:id="@+id/goodsVehicleType_dialog_cut_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

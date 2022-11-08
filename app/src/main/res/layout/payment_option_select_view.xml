@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/paymentOptionLayout"
+    app:behavior_peekHeight="70dp"
+    android:background="@drawable/top_radius_drawable"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+    android:background="@android:color/transparent"
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        style="@style/slider_layout">
+<!--        android:elevation="@dimen/dimen_0dp"-->
+<!--        app:cardElevation="@dimen/dimen_0dp"-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_gravity="top|center"
+            android:gravity="center">
+
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@android:color/darker_gray" />-->
+
+            <ImageView
+                android:id="@+id/paymentOptionSheetClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_expand_more_24"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_margin_left"
+            android:layout_marginRight="@dimen/top_margin_right"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/inner_heading_text_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.9"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_payment_mode">
+                    </com.google.android.material.textview.MaterialTextView>
+                    <ImageView
+                        android:id="@+id/paymentClose"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_close_24"
+                        android:layout_weight="0.1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        style="@style/content_text_dark_gray"
+                        android:id="@+id/google_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/google_pay">
+                    </com.google.android.material.radiobutton.MaterialRadioButton>
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        style="@style/content_text_dark_gray"
+                        android:id="@+id/paytm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/paytm_pay">
+                    </com.google.android.material.radiobutton.MaterialRadioButton>
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        style="@style/content_text_dark_gray"
+                        android:id="@+id/phonepe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_pay">
+                    </com.google.android.material.radiobutton.MaterialRadioButton></RadioGroup>
+            </LinearLayout>
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:padding="@dimen/dimen_10dp">
+
+            <TextView
+                style="@style/inner_heading_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_payment_method"/>
+
+            <TextView
+                style="@style/normal_payment_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_debit_credit_card"
+                android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:drawableLeft="@drawable/ic_baseline_payment_24"
+                android:drawablePadding="@dimen/dimen_20dp"/>
+
+            <TextView
+                style="@style/normal_payment_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_existing_upi_id"
+                android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:drawableLeft="@drawable/ic_baseline_payments_24"
+                android:drawablePadding="@dimen/dimen_20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:padding="@dimen/dimen_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/apply_coupon_option"
+                    style="@style/medium_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/dimen_0dp"
+                    android:text="@string/apply_coupon"
+                    android:textColor="#00ABEE"
+                    android:drawableLeft="@drawable/ic_baseline_local_offer_24"
+                    android:drawablePadding="@dimen/dimen_20dp"/>
+
+                <ImageView
+                    android:id="@+id/apply_coupon_cut_btn"
+                    style="@style/form_cut_icon_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/couponEditText"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/coupon_code_txt"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAlternateMobile"
+                        style="@style/form_edit_text"
+                        />
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:padding="@dimen/psn_gds_inputTextField_padding"-->
+                    <!--            android:maxLines="1"-->
+                    <!--            android:inputType="phone"-->
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_coupon_apply"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirm_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

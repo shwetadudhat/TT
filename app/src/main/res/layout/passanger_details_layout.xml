@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/passangerDetailsLayout"
+    app:behavior_peekHeight="70dp"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <ImageView
+        android:id="@+id/passangerDetails_ivFullScreen"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_fullscreen_24"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10dp"
+        android:background="@color/colorPrimary"
+        android:layout_margin="@dimen/dp_4">
+
+        <TextView
+            android:id="@+id/psnDetail_liveTime"
+            style="@style/sub_heading_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:12:89 PM"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/dimen_20dp"/>
+
+        <TextView
+            style="@style/sub_heading_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.1 Km"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passangerDetailsBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/top_radius_drawable">
+
+        <LinearLayout
+            android:id="@+id/materialCardView"
+            style="@style/slider_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--        android:elevation="@dimen/dimen_0dp"-->
+            <!--        app:cardElevation="@dimen/dimen_0dp"-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_gravity="top|center"
+                android:gravity="center">
+
+                <!--            <View-->
+                <!--                android:layout_width="20dp"-->
+                <!--                android:layout_height="2dp"-->
+                <!--                android:layout_gravity="center"-->
+                <!--                android:background="@android:color/darker_gray" />-->
+
+                <ImageView
+                    android:id="@+id/passangerDetailsBltnSheetClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_expand_less_24"
+                    android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/passangerDetailsBottomSheetClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_baseline_close_24"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="@dimen/dimen_10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/top_padding_left"
+                android:paddingRight="@dimen/top_padding_right">
+                <!--            android:paddingBottom="@dimen/top_padding_bottom"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/dp_4">
+
+                        <ImageView
+                            android:id="@+id/passangerDetailVehicleIcon"
+                            style="@style/vehicle_photo"
+                            android:layout_width="@dimen/small_image_view_size"
+                            android:layout_height="@dimen/small_image_view_size"
+                            android:layout_marginLeft="@dimen/top_margin_left"
+                            ></ImageView>
+                        <!--                    android:background="@drawable/car"-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/small_image_view_size"
+                            android:layout_height="@dimen/small_image_view_size"
+                            android:src="@drawable/ic_baseline_account_circle_24"
+                            />
+                        <!--                        android:background="@drawable/ic_baseline_account_circle_24"-->
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/content_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:layout_marginLeft="@dimen/top_margin_left"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:gravity="left"
+                                android:text="PassangerName" />
+
+<!--                            <com.google.android.material.textview.MaterialTextView-->
+<!--                                style="@style/content_text_black"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="0.4"-->
+<!--                                android:background="@color/colorPrimary"-->
+<!--                                android:gravity="center"-->
+<!--                                android:text="OTP:02222"-->
+<!--                                android:textColor="@color/white"/>-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/top_margin_left"
+                            android:layout_marginRight="@dimen/top_margin_right"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/content_text_dark_gray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="@dimen/dimen_5dp"
+                                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                                    android:text="5" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/content_text_dark_gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/small_text_size"
+                                    android:text="Arrive in 7 min"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/content_text_dark_gray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="@dimen/dimen_5dp"
+                                    android:drawableLeft="@drawable/ic_baseline_shopping_bag_24"
+                                    android:text="4" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/content_text_dark_gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4.5 / 99999"
+                                    android:textSize="@dimen/small_text_size"
+                                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="OTP"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_marginLeft="@dimen/dimen_10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/bookingOTP"
+                            style="@style/form_edit_text_for_number_field"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/bookingOTP_submitBtn"
+                        style="@style/medium_button_theme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin_top"
+                    android:gravity="center">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/passangerDetails_landMark"
+                        style="@style/white_button_theme"
+                        android:layout_width="120dp"
+                        android:drawableLeft="@drawable/ic_baseline_apartment_24"
+                        android:gravity="center"
+                        android:text="@string/land_mark"></com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/passangerDetails_cancelTv"
+                        style="@style/white_button_theme"
+                        android:drawableLeft="@drawable/ic_baseline_close_24"
+                        android:gravity="center"
+                        android:text="@string/cancel"></com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/passangerDetails_call"
+                        style="@style/white_button_theme"
+                        android:layout_width="80dp"
+                        android:drawableLeft="@drawable/ic_baseline_call_24"
+                        android:gravity="center"
+                        android:text="@string/call"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/inner_heading_text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="@dimen/dimen_0dp"
+                    android:text="Estimated Cash to be Paid: Rs.10000"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/nestedScrollView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="@dimen/dimen_10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_margin="@dimen/dp_4">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.7"
+                                    android:orientation="vertical"
+                                    android:paddingTop="@dimen/dimen_10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_marginLeft="@dimen/dp_4"
+                                            android:layout_marginRight="@dimen/dp_4"
+                                            android:src="@drawable/pickpu_icon_image" />
+                                        <!--                            android:layout_weight="0.05"-->
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/passangerDetails_tvSelectedPickupLocation"
+                                            style="@style/search_edit_text"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="0.95"
+                                            android:paddingLeft="7dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingRight="5dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="Pickup address" />
+                                    </LinearLayout>
+
+                                    <!--                        <LinearLayout-->
+                                    <!--                            android:layout_width="match_parent"-->
+                                    <!--                            android:layout_height="wrap_content"-->
+                                    <!--                            android:gravity="center"-->
+                                    <!--                            android:orientation="vertical"-->
+                                    <!--                            >-->
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:scrollbars="vertical">
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/passangerDetails_rvSltstopLocation"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:autofillHints="@string/desti_location"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintHeight_max="80dp">
+
+                                        </androidx.recyclerview.widget.RecyclerView>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <!--                        </LinearLayout>-->
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_marginRight="@dimen/dp_4"
+                                            android:layout_marginLeft="@dimen/dp_4"
+                                            android:src="@drawable/destination_icon_image" />
+                                        <!--                            android:layout_weight="0.044"-->
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.956">
+
+                                            <com.google.android.material.textview.MaterialTextView
+                                                android:id="@+id/passangerDetails_tvSelectedDestLocation"
+                                                style="@style/search_edit_text"
+                                                android:layout_width="0dp"
+                                                android:layout_height="30dp"
+                                                android:layout_weight="0.5"
+                                                android:paddingLeft="8dp"
+                                                android:paddingTop="5dp"
+                                                android:paddingRight="5dp"
+                                                android:paddingBottom="5dp"
+                                                android:text="Destination adress" />
+
+                                            <com.google.android.material.textview.MaterialTextView
+                                                android:id="@+id/passangerDetails_tvDeLocationTimes"
+                                                style="@style/search_edit_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="right|center_vertical"
+                                                android:text="" />
+                                            <!--                                android:layout_weight="0.25"-->
+
+                                            <com.google.android.material.textview.MaterialTextView
+                                                android:id="@+id/passangerDetails_tvDeLocationDistance"
+                                                style="@style/search_edit_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:minWidth="@dimen/distance_mt_minimum_width"
+                                                android:gravity="right|center_vertical"
+                                                android:text="" />
+                                            <!--                                android:layout_weight="0.25"-->
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            style="@style/search_edit_text"
+                                            android:layout_width="0dp"
+                                            android:layout_height="30dp"
+                                            android:layout_weight="0.5"
+                                            android:paddingLeft="8dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingRight="5dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="" />
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/psgDetails_tvTotalTimes"
+                                            style="@style/search_edit_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="right|center_vertical"
+                                            android:text="22 h 13 m" />
+                                        <!--                                android:layout_weight="0.25"-->
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/pasgDetails_tvTotalDistance"
+                                            style="@style/search_edit_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:minWidth="@dimen/distance_mt_minimum_width"
+                                            android:gravity="right|center_vertical"
+                                            android:text="1000 km" />
+                                        <!--                                android:layout_weight="0.25"-->
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/top_margin_left"
+                        android:elevation="@dimen/dimen_10dp"
+                        app:cardCornerRadius="@dimen/dp_4"
+                        android:padding="@dimen/dp_4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <TextView
+                                style="@style/inner_heading_text_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/total_fare"
+                                android:textSize="@dimen/X_large_text_size"
+                                android:textColor="@color/heading_color"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_marginBottom="@dimen/dimen_20dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dp_4">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.1"
+                                    style="@style/content_text_dark_gray1"
+                                    android:text="Cash"
+                                    android:drawableLeft="@drawable/ic_baseline_payments_24"
+                                    android:drawablePadding="@dimen/dimen_10dp"/>
+
+<!--                                <com.google.android.material.textview.MaterialTextView-->
+<!--                                    android:id="@+id/driverDetails_changePaymentMethod"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="0.3"-->
+<!--                                    android:text="Change"-->
+<!--                                    android:textColor="@color/colorPrimary"-->
+<!--                                    android:gravity="end"/>-->
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="@dimen/top_margin_left"-->
+<!--                        android:elevation="@dimen/dimen_10dp"-->
+<!--                        app:cardCornerRadius="@dimen/dp_4"-->
+<!--                        android:padding="@dimen/dp_4">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="@dimen/dimen_10dp">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="@string/ride_benifit"-->
+<!--                                android:textSize="@dimen/X_large_text_size"-->
+<!--                                android:textColor="@color/heading_color"-->
+<!--                                android:fontFamily="@font/roboto_regular"-->
+<!--                                android:layout_marginBottom="@dimen/dimen_20dp"/>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:padding="@dimen/dp_4">-->
+
+<!--                                <com.google.android.material.textview.MaterialTextView-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="0.1"-->
+<!--                                    android:text="@string/ride_benifit_msg"-->
+<!--                                    android:drawableLeft="@drawable/ic_baseline_payments_24"-->
+<!--                                    android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"-->
+<!--                                    android:drawablePadding="@dimen/dimen_10dp"/>-->
+
+<!--                            </LinearLayout>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+                    <Button
+                        android:id="@+id/driver_endRideBtn"
+                        style="@style/medium_button_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"
+                        android:text="End Ride"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

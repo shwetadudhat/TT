@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin_top"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/inner_heading_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:layout_marginRight="@dimen/top_margin_right"
+            android:layout_marginLeft="@dimen/top_margin_left"
+            android:textColor="@android:color/black"/>
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:theme="@style/rating_bar_color"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center|top|left"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin_top"
+            android:numStars="5"
+            android:layout_marginBottom="@dimen/top_margin_bottom"
+            android:stepSize="0.5"
+            android:rating="2.5"/>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/search_outer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_margin_left"
+            android:layout_marginRight="@dimen/top_margin_right"
+            android:layout_marginBottom="@dimen/top_margin_bottom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Feed back"
+                android:paddingTop="@dimen/top_padding_top"
+                android:paddingBottom="@dimen/top_padding_bottom"
+                android:textSize="@dimen/content_text_size" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_gravity="bottom"
+        android:paddingBottom="@dimen/top_padding_bottom">
+        <Button
+            style="@style/medium_button_theme"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/top_margin_left"
+            android:layout_marginRight="@dimen/top_margin_right"
+            android:text="@string/ok">
+
+        </Button>
+    </LinearLayout>
+</LinearLayout>

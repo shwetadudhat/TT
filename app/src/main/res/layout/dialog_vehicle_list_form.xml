@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/fully_transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/form_dialog_width"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10dp"
+        android:layout_margin="@dimen/dialog_content_margin"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dialog_vehicleListFormTitle"
+                style="@style/sub_heading_large_text_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add Vehicle" />
+
+            <ImageButton
+                android:id="@+id/editBtn"
+                style="@style/form_edit_icon_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/delBtn"
+                style="@style/form_delete_icon_button"/>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/form_card_for_image"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/vehiclePhoto"
+                style="@style/form_image" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/cutBtn"-->
+        <!--        style="@style/form_cut_icon_button"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/addToListBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- android:textAppearance="@style/switch_text_appearance_context_bold"-->
+
+                <Switch
+                    android:id="@+id/vhList_psgGoodsSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/switchButtonTheme"
+                    android:track="@drawable/passanger_goods_switch_track"
+                    android:thumb="@drawable/passanger_goods_switch_thumb"
+                    android:layout_marginBottom="@dimen/dimen_5dp"/>
+
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/driverAllotmentSinner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/top_margin_left"/>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:id="@+id/driverAllotment"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Driver Allotment">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/driverAllotmentEdit"-->
+<!--                        style="@style/form_edit_text_for_text_field"-->
+<!--                        android:text="select Driver"-->
+<!--                        android:editable="false" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:id="@+id/driverAllotment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="0.8"
+                        android:hint="Driver Allotment">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/driverAllotmentEdit"
+                            style="@style/form_edit_text_for_text_field"
+                            android:text="select Driver"
+                            android:editable="false"
+                            android:enabled="false"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp">
+
+                        <ImageButton
+                            android:id="@+id/drVehicleAddDriverIcon"
+                            style="@style/form_side_button"
+                            android:src="@drawable/ic_baseline_add_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="Type">-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:id="@+id/drVehicleType"-->
+<!--                            style="@style/form_edit_text" />-->
+
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/drVehicleType"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/top_margin_left"/>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/drVehicleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Vehicle Type">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drVehicleTypeEdit"
+                        style="@style/form_edit_text_for_text_field"
+                        android:text="Select Vehicle Type"
+                        android:editable="false"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Vehicle Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drVehicleName"
+                        style="@style/form_edit_text_for_text_field" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Vehicle No">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drVehicleNumber"
+                        style="@style/form_edit_text_for_text_capital_field" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drVehicleRate"
+                        style="@style/form_edit_text_for_decimal_number_field" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Model">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drVehicleModel"
+                        style="@style/form_edit_text_for_text_capital_field" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Registration No">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drVehicleRegistrationNo"
+                        style="@style/form_edit_text_for_text_capital_field" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Capacity">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/drVehicleCapacity"-->
+<!--                        style="@style/form_edit_text_for_decimal_number_field" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--                <com.google.android.material.textfield.TextInputEditText-->
+                    <!--                    style="@style/drive_details_edit_text"-->
+                    <!--                    android:layout_width="0dp"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:layout_weight="0.8" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:hint="Capacity">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drVehicleCapacity"
+                            style="@style/form_edit_text_for_decimal_number_field"
+                            />
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="match_parent"-->
+                        <!--                        android:padding="@dimen/psn_gds_inputTextField_padding"-->
+                        <!--                        android:maxLines="1"-->
+                        <!--                        android:inputType="numberDecimal"-->
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--                <View-->
+                    <!--                    android:layout_width="@dimen/dp_1"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:background="@android:color/darker_gray" />-->
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:background="@drawable/border_rectangle"
+                        android:layout_marginTop="@dimen/dp_4">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/mtv_capacityUnit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:paddingLeft="@dimen/top_padding_left"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"
+                            android:text="Unit"
+                            android:textSize="14sp"/>
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3">
+                            <ImageView
+                                android:id="@+id/iv_capacity_unit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_baseline_arrow_drop_down_24">
+                            </ImageView>
+                            <!--                        <androidx.appcompat.widget.AppCompatSpinner-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="match_parent"-->
+
+                            <!--                            android:textSize="@dimen/content_text_size"-->
+                            <!--                            android:entries="@array/goods_unit_list"/>-->
+                            <!--                        android:visibility="gone"-->
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--                <com.google.android.material.textfield.TextInputEditText-->
+                    <!--                    style="@style/drive_details_edit_text"-->
+                    <!--                    android:layout_width="0dp"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:layout_weight="0.8" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:hint="Available Capacity">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drVehicleAvailableCapacity"
+                            style="@style/form_edit_text_for_decimal_number_field"
+                            />
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="match_parent"-->
+                        <!--                        android:padding="@dimen/psn_gds_inputTextField_padding"-->
+                        <!--                        android:maxLines="1"-->
+                        <!--                        android:inputType="numberDecimal"-->
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--                <View-->
+                    <!--                    android:layout_width="@dimen/dp_1"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:background="@android:color/darker_gray" />-->
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:background="@drawable/border_rectangle"
+                        android:layout_marginTop="@dimen/dp_4">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/mtv_availableCapacityUnit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:paddingLeft="@dimen/top_padding_left"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"
+                            android:text="Unit"
+                            android:textSize="14sp"/>
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3">
+                            <ImageView
+                                android:id="@+id/iv_availableCapacity_unit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_baseline_arrow_drop_down_24">
+                            </ImageView>
+                            <!--                        <androidx.appcompat.widget.AppCompatSpinner-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="match_parent"-->
+
+                            <!--                            android:textSize="@dimen/content_text_size"-->
+                            <!--                            android:entries="@array/goods_unit_list"/>-->
+                            <!--                        android:visibility="gone"-->
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Registration Expire">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/drVehicleRegistrationExpire"-->
+<!--                        style="@style/form_edit_text_for_date_field" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="0.8"
+                        android:hint="Registration Expiry">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drVehicleRegistrationExpire"
+                            style="@style/form_edit_text_for_text_field"
+                            android:enabled="false"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/drVehicleRegExpDatePick"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Pick"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:layout_marginLeft="@dimen/dimen_10dp"/>-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp">
+
+                        <ImageButton
+                            android:id="@+id/drVehicleRegExpDatePick"
+                            style="@style/form_side_button"
+                            android:src="@drawable/ic_baseline_calendar_today_24" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Insurance">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/drVehicleInsurance"-->
+<!--                        style="@style/form_edit_text_for_text_field" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="0.8"
+                        android:hint="Insurance No">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drVehicleInsurance"
+                            style="@style/form_edit_text_for_text_capital_field" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp">
+
+                        <ImageButton
+                            android:id="@+id/vhList_viewInsuranceDocbtn"
+                            style="@style/form_side_button"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+                        <ImageButton
+                            android:id="@+id/vhList_uploadinsuranceDocbtn"
+                            style="@style/form_side_button"
+                            android:src="@drawable/ic_baseline_publish_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Insurance Expire">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/drVehicleInsuranceExpire"-->
+<!--                        style="@style/form_edit_text_for_date_field" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="0.8"
+                        android:hint="Insurance Expiry">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drVehicleInsuranceExpire"
+                            style="@style/form_edit_text_for_text_field"
+                            android:enabled="false"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/drVehicleInsExpDatePick"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Pick"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:layout_marginLeft="@dimen/dimen_10dp"/>-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp">
+
+                        <ImageButton
+                            android:id="@+id/drVehicleInsExpDatePick"
+                            style="@style/form_side_button"
+                            android:src="@drawable/ic_baseline_calendar_today_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="0.8"
+                        android:hint="Pollution No">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drVehiclePollution"
+                            style="@style/form_edit_text_for_text_capital_field" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp">
+
+                        <ImageButton
+                            android:id="@+id/vhList_viewPollutionDocbtn"
+                            style="@style/form_side_button"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+                        <ImageButton
+                            android:id="@+id/vhList_uploadPollutionDocbtn"
+                            style="@style/form_side_button"
+                            android:src="@drawable/ic_baseline_publish_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="0.8"
+                        android:hint="Condition No">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drVehicleCondition"
+                            style="@style/form_edit_text_for_text_capital_field" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp">
+
+                        <ImageButton
+                            android:id="@+id/vhList_viewConditionDocbtn"
+                            style="@style/form_side_button"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+                        <ImageButton
+                            android:id="@+id/vhList_uploadConditionDocbtn"
+                            style="@style/form_side_button"
+                            android:src="@drawable/ic_baseline_publish_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_rectangle"
+                    android:layout_marginTop="@dimen/top_margin_left">
+
+                    <TextView
+                        style="@style/content_text_dark_gray"
+                        android:id="@+id/vhListForm_addFacilityTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dimen_20dp"
+                        android:padding="@dimen/dimen_10dp"
+                        android:text="Add Facilities"
+                        android:textColor="@color/colorPrimary"
+                        android:drawableRight="@drawable/ic_baseline_add_24"
+                        android:drawableTint="@color/colorPrimary"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+        <Button
+            android:id="@+id/addToListBtn"
+            style="@style/form_submit_button"
+            android:layout_height="wrap_content"
+            android:text="Add To List"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/dialog_close_btn"
+        android:id="@+id/cutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--    <corners-->
+<!--        android:topRightRadius="@dimen/slider_corner_radius"-->
+<!--        android:topLeftRadius="@dimen/slider_corner_radius"/>-->
+<!--    <solid android:color="@android:color/white"/>-->
+<!--&lt;!&ndash;    <stroke android:color="@android:color/darker_gray"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:dashWidth="@dimen/dimen_5dp"/>&ndash;&gt;-->
+<!--</shape>-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:top="1dp">
+
+        <shape
+            android:shape="rectangle">
+
+            <solid android:color="#1A8BC34A"/>
+            <corners android:topRightRadius="@dimen/slider_corner_radius"
+                android:topLeftRadius="@dimen/slider_corner_radius"/>
+
+        </shape>
+
+    </item>
+
+    <item
+        android:top="2dp">
+
+        <shape
+            android:shape="rectangle">
+
+            <solid android:color="#408BC34A"/>
+            <corners android:topRightRadius="@dimen/slider_corner_radius"
+                android:topLeftRadius="@dimen/slider_corner_radius"/>
+
+        </shape>
+
+    </item>
+
+    <item
+        android:top="3dp">
+
+        <shape
+            android:shape="rectangle">
+
+            <solid android:color="#738BC34A"/>
+            <corners android:topRightRadius="@dimen/slider_corner_radius"
+                android:topLeftRadius="@dimen/slider_corner_radius"/>
+
+        </shape>
+
+    </item>
+
+    <item
+        android:top="4dp">
+
+        <shape
+            android:shape="rectangle">
+
+            <solid android:color="#B38BC34A"/>
+            <corners android:topRightRadius="@dimen/slider_corner_radius"
+                android:topLeftRadius="@dimen/slider_corner_radius"/>
+
+        </shape>
+
+    </item>
+
+    <item
+        android:top="5dp"
+        >
+
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/white"/>
+            <corners android:topRightRadius="@dimen/slider_corner_radius"
+                android:topLeftRadius="@dimen/slider_corner_radius"/>
+
+        </shape>
+
+    </item>
+
+</layer-list>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fully_transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/form_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dialog_content_margin"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--        <ImageButton-->
+            <!--            android:id="@+id/bidCutBtn"-->
+            <!--            style="@style/form_cut_icon_button"-->
+            <!--            android:layout_marginRight="@dimen/dimen_10dp" />-->
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/inner_heading_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bid Form" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_weight="0.05"
+                    android:src="@drawable/pickpu_icon_image" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bid_pickupLocation"
+                    style="@style/search_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.95"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Kashmir" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:scrollbars="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bid_rvStopLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/desti_location"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--                app:layout_constraintHeight_max="80dp"-->
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_weight="0.044"
+                    android:src="@drawable/destination_icon_image" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.956">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bid_destinationLocation"
+                        style="@style/search_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Madhya Pradesh" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bid_tvDeLocationTimes"
+                        style="@style/search_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="right"
+                        android:text="" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bid_tvDeLocationDistance"
+                        style="@style/search_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="right"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_weight="0.044"
+                    android:src="@drawable/destination_icon_image" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.956">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bid_destinationLocation"
+                        style="@style/search_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Madhya Pradesh" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bid_tvDeLocationTimes"
+                        style="@style/search_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="right|center_vertical"
+                        android:text="2h 22m" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bid_tvDeLocationDistance"
+                        style="@style/search_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="right|center_vertical"
+                        android:text="100 km" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <com.google.android.material.textview.MaterialTextView-->
+<!--                    style="@style/search_edit_text"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_weight="0.5"-->
+<!--                    android:paddingLeft="8dp"-->
+<!--                    android:paddingTop="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:paddingBottom="5dp"-->
+<!--                    android:text="" />-->
+
+<!--                <com.google.android.material.textview.MaterialTextView-->
+<!--                    android:id="@+id/bid_tvTotalTimes"-->
+<!--                    style="@style/search_edit_text"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="right|center_vertical"-->
+<!--                    android:text="22 h 13 m" />-->
+<!--                &lt;!&ndash;                                android:layout_weight="0.25"&ndash;&gt;-->
+
+<!--                <com.google.android.material.textview.MaterialTextView-->
+<!--                    android:id="@+id/bid_tvTotalDistance"-->
+<!--                    style="@style/search_edit_text"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:minWidth="@dimen/distance_mt_minimum_width"-->
+<!--                    android:gravity="right|center_vertical"-->
+<!--                    android:text="1000 km" />-->
+<!--                &lt;!&ndash;                                android:layout_weight="0.25"&ndash;&gt;-->
+
+<!--            </LinearLayout>-->
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:gravity="center"-->
+            <!--                            android:orientation="vertical"-->
+            <!--                            >-->
+
+            <!--                        </LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bid_rateAmount"
+                    style="@style/form_edit_text_for_number_field" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bid Amount"
+                android:layout_marginTop="@dimen/top_padding_top">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bid_bidAmount"
+                    style="@style/form_edit_text_for_number_field" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/vehicleListSpinnerForBid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bid_SubmitBtn"
+                style="@style/form_submit_button"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/dialog_close_btn"
+        android:id="@+id/bidCutBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

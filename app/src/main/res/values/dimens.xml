@@ -1,0 +1,162 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">170dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_size">50dp</dimen>
+
+    <dimen name="app_name_text_size">20sp</dimen>
+
+    <dimen name="elevation">20dp</dimen>
+    <!--Main Layout-->
+    <dimen name="top_padding_top">10dp</dimen>
+    <dimen name="top_padding_bottom">10dp</dimen>
+    <dimen name="top_padding_left">10dp</dimen>
+    <dimen name="top_padding_right">10dp</dimen>
+    <dimen name="top_padding_small">6dp</dimen>
+
+    <dimen name="top_margin_top">20dp</dimen>
+    <dimen name="top_margin_bottom">20dp</dimen>
+    <dimen name="top_margin_left">8dp</dimen>
+    <dimen name="top_margin_right">8dp</dimen>
+
+    <!--Hint text-->
+    <dimen name="hint_text_size">12sp</dimen>
+
+    <!--Content text-->
+    <dimen name="content_text_size">14sp</dimen>
+    <dimen name="content_small_text_size">12sp</dimen>
+    <dimen name="content_desc_small_text_size">10sp</dimen>
+    <dimen name="content_small_text_dropdown_size">12sp</dimen>
+
+    <dimen name="content_margin_top">10dp</dimen>
+    <dimen name="content_margin_bottom">10dp</dimen>
+    <dimen name="content_margin_left">10dp</dimen>
+    <dimen name="content_margin_right">10dp</dimen>
+
+
+    <!--    <dimen name="small_text_size">8sp</dimen>-->
+
+    <!--Button-->
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="button_corner_radius">5dp</dimen>
+
+    <!--Header text-->
+    <dimen name="heading_text_size">24sp</dimen>
+    <dimen name="heading_text_size1">16sp</dimen>
+    <dimen name="heading_margin_top">60dp</dimen>
+    <dimen name="heading_margin_bottom">50dp</dimen>
+    <dimen name="heading_margin_left">10dp</dimen>
+    <dimen name="heading_margin_right">10dp</dimen>
+    <dimen name="sub_heading_text_size">16sp</dimen>
+
+    <!--Edit Text size-->
+    <dimen name="mid_edit_text_size">14sp</dimen>
+    <dimen name="big_edit_text_size">18sp</dimen>
+
+    <!-- -->
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+
+    <dimen name="margin_between_two">2dp</dimen>
+    <!--action bar-->
+    <dimen name="action_bar_height">45dp</dimen>
+    <dimen name="action_bar_height_big">50dp</dimen>
+
+    <!--search input-->
+    <dimen name="search_input_height">40dp</dimen>
+
+
+    <!--search outer layout-->
+    <dimen name="search_padding_top">1dp</dimen>
+    <dimen name="search_padding_bottom">1dp</dimen>
+    <dimen name="search_padding_left">1dp</dimen>
+    <dimen name="search_padding_right">1dp</dimen>
+
+    <dimen name="dimen_0dp">0dp</dimen>
+    <dimen name="dimen_120dp">120dp</dimen>
+    <dimen name="dimen_180dp">180dp</dimen>
+    <dimen name="dimen_150dp">150dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_30dp">30dp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_50dp">50dp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+    <dimen name="dimen_70dp">70dp</dimen>
+    <dimen name="dimen_100dp">100dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="dimen_24dp">24dp</dimen>
+
+    <!--Profile Image-->
+    <dimen name="imageView_width">100dp</dimen>
+    <dimen name="imageView_height">100dp</dimen>
+    <dimen name="imageView_corner_radius">75dp</dimen>
+    <dimen name="imageView_card_elevation">5dp</dimen>
+
+    <!--Passenger and Goods Vehicle-->
+    <dimen name="psn_gds_margin_right">4dp</dimen>
+    <dimen name="psn_gds_margin_left">4dp</dimen>
+    <dimen name="psn_gds_margin_top">2dp</dimen>
+    <dimen name="psn_gds_margin_bottom">2dp</dimen>
+    <dimen name="psn_gds_inputTextField_padding">10dp</dimen>
+
+    <!--slider dimen-->
+    <dimen name="slider_corner_radius">20dp</dimen>
+
+    <!--    Form-->
+    <dimen name="form_dialog_width">300dp</dimen>
+    <dimen name="form_scroll_view_height">300dp</dimen>
+
+    <!--    Pickup, Destination, Stop icon Dimen-->
+    <dimen name="icon_width">10dp</dimen>
+    <dimen name="icon_height">10dp</dimen>
+    <dimen name="icon_margin_right">4dp</dimen>
+    <dimen name="icon_margin_left">4dp</dimen>
+
+    <dimen name="icon_small_width">8dp</dimen>
+    <dimen name="icon_small_height">8dp</dimen>
+
+    <!--    Location distance-->
+    <dimen name="distance_mt_minimum_width">75dp</dimen>
+
+    <!--    choose photo icon size-->
+    <dimen name="choose_photo_icon_size">50dp</dimen>
+
+    <!--    Text sizes-->
+    <dimen name="X_X_large_text_size">20sp</dimen>
+    <dimen name="X_large_text_size">18sp</dimen>
+    <dimen name="large_text_size">14sp</dimen>
+    <dimen name="medium_text_size">10sp</dimen>
+    <dimen name="small_text_size">10sp</dimen>
+    <dimen name="X_small_text_size">8sp</dimen>
+
+    <!--    small Image View-->
+    <dimen name="small_image_view_size">40dp</dimen>
+    <dimen name="x_small_image_view_size">20dp</dimen>
+
+    <!--    horizontal icon size-->
+    <dimen name="horz_icon_size">30dp</dimen>
+    <dimen name="horz_icon_card_size">75dp</dimen>
+
+    <!--    icon size-->
+    <dimen name="icon_viewport_size">18</dimen>
+
+
+    <dimen name="vertical_icon_margin">10dp</dimen>
+
+    <!--    Dialog Parent Linear view Margin-->
+    <dimen name="dialog_content_margin">15dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">0dp</dimen>
+
+</resources>

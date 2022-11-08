@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:id="@+id/vehicleAutoListLayout"
+    android:orientation="vertical"
+    app:behavior_peekHeight="70dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+<!--    android:background="@android:color/transparent"-->
+
+
+    <ImageView
+        android:id="@+id/vehicleList_ivFullScreen"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_fullscreen_24"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/top_radius_drawable">
+
+        <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/slider_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_gravity="top|center"
+            android:gravity="center">
+
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@android:color/darker_gray" />-->
+
+            <ImageView
+                android:id="@+id/vehiclListBtnSheetClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_expand_more_24"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/top_padding_left"
+            android:paddingRight="@dimen/top_padding_right"
+            android:paddingBottom="@dimen/top_padding_small">
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/linearLayout17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/inner_heading_text_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/dimen_0dp"
+                        android:layout_marginBottom="@dimen/dimen_0dp"
+                        android:text="@string/recommended" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/carpool"
+                        android:theme="@style/switchButtonTheme"
+                        android:textAppearance="@style/switch_text_appearance_context_bold"/>
+
+                    <TextView
+                        android:id="@+id/vehicleList_filter"
+                        style="@style/content_text_dark_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:drawablePadding="@dimen/dp_4"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:drawableLeft="@drawable/ic_baseline_filter_alt_24"/>
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="left">
+
+                        <LinearLayout
+                            android:id="@+id/llBike"
+                            style="@style/horz_icon_card_theme"
+                            >
+
+                            <ImageView
+                                android:layout_width="@dimen/horz_icon_size"
+                                android:layout_height="@dimen/horz_icon_size"
+                                android:src="@drawable/motorbike"/>
+
+                            <TextView
+                                android:id="@+id/tvBike"
+                                style="@style/horz_icon_text_theme"
+                                android:text="@string/motorbike"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llTaktak"
+                            style="@style/horz_icon_card_theme"
+                            >
+
+                            <ImageView
+                                android:layout_width="@dimen/horz_icon_size"
+                                android:layout_height="@dimen/horz_icon_size"
+                                android:src="@drawable/tuk_tuk"/>
+
+                            <TextView
+                                android:id="@+id/tvTaktak"
+                                style="@style/horz_icon_text_theme"
+                                android:text="@string/tuktuk" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llTaxi"
+                            style="@style/horz_icon_card_theme"
+                            android:background="@drawable/primary_color_bottom_border"
+                            >
+
+                            <ImageView
+                                android:layout_width="@dimen/horz_icon_size"
+                                android:layout_height="@dimen/horz_icon_size"
+                                android:src="@drawable/taxi"/>
+
+                            <TextView
+                                android:id="@+id/tvTaxi"
+                                style="@style/horz_icon_text_theme"
+                                android:text="@string/taxi"
+                                android:textColor="@color/colorPrimary"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPickup"
+                            style="@style/horz_icon_card_theme">
+
+                            <ImageView
+                                android:layout_width="@dimen/horz_icon_size"
+                                android:layout_height="@dimen/horz_icon_size"
+                                android:src="@drawable/pickup_truck"/>
+
+                            <TextView
+                                android:id="@+id/tvPickup"
+                                style="@style/horz_icon_text_theme"
+                                android:text="@string/pickup_truck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llMiniBus"
+                            style="@style/horz_icon_card_theme">
+
+                            <ImageView
+                                android:layout_width="@dimen/horz_icon_size"
+                                android:layout_height="@dimen/horz_icon_size"
+                                android:src="@drawable/minibus"/>
+
+                            <TextView
+                                android:id="@+id/tvMiniBus"
+                                style="@style/horz_icon_text_theme"
+                                android:text="@string/minibus" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSuv"
+                            style="@style/horz_icon_card_theme">
+
+                            <ImageView
+                                android:layout_width="@dimen/horz_icon_size"
+                                android:layout_height="@dimen/horz_icon_size"
+                                android:src="@drawable/suv"/>
+
+                            <TextView
+                                android:id="@+id/tvSuv"
+                                style="@style/horz_icon_text_theme"
+                                android:text="@string/suv" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVehicleList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layerType="hardware" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/search_edit_text"
+                            android:id="@+id/llPaymentOption"
+                            android:layout_width="wrap_content"
+                            android:text="Cash"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:drawableLeft="@drawable/ic_baseline_payments_24"
+                            android:drawableRight="@drawable/ic_baseline_expand_more_24"
+                            android:layout_height="@dimen/button_height"/>
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="@dimen/button_height"-->
+<!--                            >-->
+<!--&lt;!&ndash;                            android:layout_weight="0.1"&ndash;&gt;-->
+<!--                            <ImageView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:src="@drawable/ic_baseline_expand_more_24">-->
+<!--                            </ImageView>-->
+<!--                            <androidx.appcompat.widget.AppCompatSpinner-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:visibility="gone"-->
+<!--                                android:textSize="@dimen/content_text_size" />-->
+<!--                        </FrameLayout>-->
+                    </LinearLayout>
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rideCofirm"
+                    style="@style/medium_button_theme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="TemperoryBtn"
+                    android:layout_weight="0.4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

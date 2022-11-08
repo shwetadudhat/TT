@@ -1,0 +1,3 @@
+include ':customsocket'
+include ':app'
+rootProject.name = "TT"

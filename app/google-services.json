@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "260946546392",
+    "firebase_url": "https://signindemo-a9e1c-default-rtdb.firebaseio.com",
+    "project_id": "signindemo-a9e1c",
+    "storage_bucket": "signindemo-a9e1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260946546392:android:d9027059e484055b1a91ad",
+        "android_client_info": {
+          "package_name": "com.technlogi.tt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260946546392-8rn3tkdqss3ud56ul78ikc059q8in6nv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJIFEIv4dZiMIlMxAs39usd-F9nMLwUP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260946546392-8rn3tkdqss3ud56ul78ikc059q8in6nv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

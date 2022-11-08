@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ratingBottomSheet"
+    app:behavior_peekHeight="70dp"
+    android:background="@drawable/top_radius_drawable"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+<!--    android:background="@android:color/transparent"-->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        style="@style/slider_layout">
+<!--        android:elevation="@dimen/dimen_0dp"-->
+<!--        app:cardElevation="@dimen/dimen_0dp"-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_gravity="top|center"
+            android:gravity="center">
+
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@android:color/darker_gray" />-->
+
+            <ImageView
+                android:id="@+id/ratingBottomSheetClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_expand_more_24"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_margin_left"
+            android:layout_marginRight="@dimen/top_margin_right"
+            android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ratingBottomSheetCutBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:src="@drawable/ic_baseline_close_24" />
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        style="@style/inner_heading_text_name"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="0.9"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Rating">-->
+<!--                    </com.google.android.material.textview.MaterialTextView>-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ratingBottomSheetCutBtn"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/ic_baseline_close_24"-->
+<!--                        android:layout_weight="0.1"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="@dimen/dp_4"
+                android:gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/form_medium_card_for_image"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_4">
+
+                    <ImageView
+                        style="@style/form_medium_image"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/sub_heading_text_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anil Solanki"/>
+
+                <TextView
+                    style="@style/content_text_dark_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MP 09 TA 1234"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/dimen_10dp">
+
+                    <TextView
+                        style="@style/sub_heading_text_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Total Fare Rs 123"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dimen_20dp"
+                        android:background="@color/light_gray">
+                    </View>
+
+                    <TextView
+                        style="@style/sub_heading_text_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="To Pay Rs 100"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rating_tvViewInvoice"
+                    style="@style/content_text_dark_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Invoice"
+                    android:textColor="@color/colorPrimary"
+                    android:drawablePadding="@dimen/dimen_5dp"
+                    android:drawableLeft="@drawable/ic_baseline_receipt_24"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/dimen_20dp">
+                </View>
+
+                <TextView
+                    style="@style/sub_heading_text_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How was your Experience?"/>
+
+<!--                <androidx.appcompat.widget.AppCompatRatingBar-->
+<!--                    android:theme="@style/rating_bar_color"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/top_margin_top"-->
+<!--                    android:layout_marginLeft="@dimen/top_margin_left"-->
+<!--                    android:layout_marginRight="@dimen/top_margin_right"-->
+<!--                    android:numStars="5"-->
+<!--                    android:stepSize="0.5"-->
+<!--                    android:rating="2.5"-->
+<!--                    />-->
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/dimen_10dp">
+
+                            <TextView
+                                style="@style/content_text_dark_gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Driver Behaviour"/>
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                style="@style/rating_bar_color"
+                                android:theme="@style/rating_bar_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:stepSize="0.5"
+                                android:numStars="5"
+                                android:rating="3"
+                                android:isIndicator="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/dimen_10dp">
+
+                            <TextView
+                                style="@style/content_text_dark_gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Speed"/>
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                style="@style/rating_bar_color"
+                                android:theme="@style/rating_bar_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:stepSize="0.5"
+                                android:numStars="5"
+                                android:rating="3"
+                                android:isIndicator="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/dimen_10dp">
+
+                            <TextView
+                                style="@style/content_text_dark_gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Vehicle Condition"/>
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                style="@style/rating_bar_color"
+                                android:theme="@style/rating_bar_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:stepSize="0.5"
+                                android:numStars="5"
+                                android:rating="3"
+                                android:isIndicator="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <TextView
+                                style="@style/content_text_dark_gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Timing"/>
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                style="@style/rating_bar_color"
+                                android:theme="@style/rating_bar_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:stepSize="0.5"
+                                android:numStars="5"
+                                android:rating="3"
+                                android:isIndicator="false"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+
+                <TextView
+                    style="@style/content_text_dark_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Give a Complement"
+                    />
+
+                <Button
+                    android:layout_width="@dimen/dimen_180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Done"/>
+
+            </LinearLayout>
+
+         </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

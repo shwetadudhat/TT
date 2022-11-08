@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_baseline_drive_eta_24"
+            android:visible="false"
+            android:title="@string/ride_details" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_user_bidding_list"-->
+<!--            android:icon="@drawable/ic_baseline_drive_eta_24"-->
+<!--            android:title="BiddingList"/>-->
+
+        <item
+            android:id="@+id/userBookingFragment"
+            android:icon="@drawable/ic_baseline_drive_eta_24"
+            android:title="@string/user_booking" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_baseline_power_settings_new_24"-->
+<!--            android:title="@string/logout" />-->
+
+        <item
+            android:id="@+id/refersEarnFragment"
+            android:icon="@drawable/ic_baseline_local_offer_24"
+            android:title="Refers and Earns"/>
+
+    </group>
+
+<!--    for testing only-->
+<!--    <item-->
+<!--        android:id="@+id/driverVehicleList"-->
+<!--        android:icon="@drawable/ic_baseline_drive_eta_24"-->
+<!--        android:title="Driver Vehicle List"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/driverList"-->
+<!--        android:icon="@drawable/ic_person"-->
+<!--        android:title="Driver List"/>-->
+</menu>

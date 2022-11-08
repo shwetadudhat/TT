@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:id="@+id/dateTimeLayout"
+    app:behavior_peekHeight="70dp"
+    android:background="@drawable/top_radius_drawable"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+<!--    android:background="@android:color/transparent"-->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/dimen_10dp"
+        style="@style/slider_layout">
+<!--        android:elevation="@dimen/dimen_0dp"-->
+<!--        app:cardElevation="@dimen/dimen_0dp"-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_gravity="top|center"
+            android:gravity="center">
+
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@android:color/darker_gray" />-->
+
+            <ImageView
+                android:id="@+id/customDateSheetClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_expand_more_24"/>
+
+        </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/top_margin_right"
+        android:layout_marginLeft="@dimen/top_margin_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/inner_heading_text_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/selet_date_time" />
+
+            <Switch
+                android:id="@+id/schedule_switch_now"
+                android:theme="@style/switchButtonTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/now"
+                android:textAppearance="@style/switch_text_appearance_context_bold"/>
+
+            <ImageView
+                android:id="@+id/timerLayoutClose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_close_24"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|left">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/search_outer_layout"
+                android:id="@+id/date_picker_actions"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="02/02/2020"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/search_outer_layout"
+                android:id="@+id/time_picker_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_watch_later_24"
+                android:gravity="center"
+                android:text="12:30"/>
+        </LinearLayout>
+
+<!--             <CheckBox-->
+<!--                 android:id="@+id/checkbox_now"-->
+<!--                 android:layout_width="match_parent"-->
+<!--                 android:layout_height="wrap_content"-->
+<!--                 android:text="Now"-->
+<!--                 android:layout_margin="@dimen/dimen_10dp"/>-->
+
+    </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDateSelect"
+        style="@style/button_theme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="bottom"
+        android:text="@string/btn_select"
+        android:layout_marginLeft="@dimen/top_margin_left"
+        android:layout_marginRight="@dimen/top_margin_right"
+        android:layout_marginBottom="@dimen/top_margin_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.button.MaterialButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fully_transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/form_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dialog_content_margin"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--        <ImageButton-->
+            <!--            android:id="@+id/bidCutBtn"-->
+            <!--            style="@style/form_cut_icon_button"-->
+            <!--            android:layout_marginRight="@dimen/dimen_10dp" />-->
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/sub_heading_large_text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking for someone else" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/content_text_dark_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Fill detail so that they also get driver number, vehicle details and booking OTP via SMS"/>
+
+            <CheckBox
+                android:id="@+id/bookingForMyself"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Myself"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:textAppearance="@style/medium_heading_without_margin"/>
+
+            <TextView
+                android:id="@+id/bookingForSomeoneElse"
+                style="@style/medium_heading_without_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/dimen_40dp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:text="Someone Else"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawableRight="@drawable/ic_baseline_expand_more_24"
+                android:drawablePadding="@dimen/dimen_10dp"/>
+
+            <include
+                android:id="@+id/bookingFor_nameMobileNoLayout"
+                layout="@layout/name_and_mobile_no_layout"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bookingFor_SubmitBtn"
+                style="@style/form_submit_button"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/dialog_close_btn"
+        android:id="@+id/bookingForCutBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

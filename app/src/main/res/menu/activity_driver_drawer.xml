@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/driverVehicleList"
+            android:icon="@drawable/ic_baseline_drive_eta_24"
+            android:title="Vehicle List"/>
+
+        <item
+            android:id="@+id/nav_driver_driver_list"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Driver List"/>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_driver_bidding_list"-->
+<!--            android:icon="@drawable/ic_baseline_drive_eta_24"-->
+<!--            android:title="Bidding List"/>-->
+
+        <item
+            android:id="@+id/driverBookingFragement"
+            android:icon="@drawable/ic_baseline_drive_eta_24"
+            android:title="@string/driver_booking" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_change_city"-->
+<!--            android:icon="@drawable/edit"-->
+<!--            android:title="@string/change_city" />-->
+
+        <item
+            android:id="@+id/refersEarnFragment"
+            android:icon="@drawable/ic_baseline_local_offer_24"
+            android:title="Refers and Earns"/>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_baseline_power_settings_new_24"-->
+<!--            android:title="@string/logout" />-->
+    </group>
+</menu>

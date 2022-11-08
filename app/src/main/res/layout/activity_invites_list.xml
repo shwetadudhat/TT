@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InvitesList"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="0">
+        <ImageView
+            android:id="@+id/invites_BackBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/quantum_ic_arrow_back_grey600_24"
+            android:layout_weight="0.1">
+        </ImageView>
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/inner_heading_text_name"
+            android:id="@+id/inviteListTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/your_invites"
+            android:layout_weight="0.8"/>
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/content_text_dark_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6 Invites . 1 pending"
+        android:layout_margin="@dimen/dimen_10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInvitesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_10dp"/>
+
+</LinearLayout>

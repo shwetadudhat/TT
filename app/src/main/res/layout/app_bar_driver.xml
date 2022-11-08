@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".user.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/driverFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llDriverToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            android:layout_marginTop="@dimen/top_padding_top">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:theme="@style/Theme.TT.AppBarOverlay"
+                app:elevation="0dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/driverToolbar"
+                    android:layout_width="50dp"
+                    android:background="@drawable/search_edit_text"
+                    android:layout_height="@dimen/action_bar_height"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    app:popupTheme="@style/Theme.TT.PopupOverlay" />
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/driver_panel_todayEarning"
+                    style="@style/sub_heading_large_text_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:text="Rs 235"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_20dp"
+                    android:paddingLeft="@dimen/dimen_20dp"
+                    android:background="@drawable/border_rectangle_color_primary"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/driver_panel_destination"
+                    style="@style/sub_heading_large_text_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:text="5,1,3 B, ABC Chowk, near XYZ Medical College,Okhla,New Delhi,986002"
+                    android:padding="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:background="@color/colorPrimary"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/driver_panel_map_icon"
+                    android:layout_width="@dimen/small_image_view_size"
+                    android:layout_height="@dimen/small_image_view_size"
+                    android:src="@drawable/google_maps"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/ivPointCurrentLocation"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="@dimen/action_bar_height"-->
+<!--                android:layout_marginTop="@dimen/dimen_5dp"-->
+<!--                android:layout_marginRight="@dimen/dimen_5dp"-->
+<!--                android:background="@drawable/search_edit_text"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <Spinner-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                style="@style/search_outer_layout"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_marginTop="@dimen/dp_4"-->
+<!--                android:layout_marginBottom="@dimen/dp_4"-->
+<!--                android:layout_weight="0.7">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="12dp"-->
+<!--                        android:layout_weight="0.08"-->
+<!--                        android:paddingLeft="6dp"-->
+<!--                        android:paddingRight="4dp"-->
+<!--                        android:src="@drawable/ic_baseline_search_24"></ImageView>-->
+
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:id="@+id/etPickUpLocation"-->
+<!--                        style="@style/search_edit_text"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight=".89"-->
+<!--                        android:elevation="0dp"-->
+<!--                        android:hint="@string/search"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:visibility="visible"></com.google.android.material.textview.MaterialTextView>-->
+
+
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+
+
+
+        </LinearLayout>
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+        <include layout="@layout/content_driver" />
+    </FrameLayout>
+    <include layout="@layout/driver_layout" />
+    <include layout="@layout/passanger_details_layout"/>
+    <include layout="@layout/driver_booking_cancel_reason_layout"/>
+    <include layout="@layout/passanger_rating_bottom_sheet"/>
+    <include layout="@layout/driver_payment_waiting_layout"/>
+    <include layout="@layout/booking_cancelled"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

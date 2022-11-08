@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".driver.OwnerProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/colorPrimary">
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        app:layout_constraintTop_toTopOf="parent"-->
+
+            <ImageView
+                android:id="@+id/owner_editProfileBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_baseline_arrow_back_white_24"></ImageView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/owner_profileTitle"
+                style="@style/inner_heading_text_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="@string/edit_profile"
+                android:textColor="@color/white"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                style="@style/sub_heading_text_white"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_medium"
+                android:drawablePadding="@dimen/dp_4"
+                android:drawableLeft="@drawable/ic_baseline_power_settings_new_24"
+                android:layout_marginRight="@dimen/dimen_20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout12"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/form_card_for_image"
+                    android:layout_marginTop="@dimen/dp_4"
+                    >
+                    <!--            android:layout_width="@dimen/imageView_width"-->
+                    <!--            android:layout_height="@dimen/imageView_height"-->
+                    <!--            android:layout_gravity="center_horizontal"-->
+                    <!--            app:cardBackgroundColor="@color/white"-->
+                    <!--            app:cardElevation="@dimen/dimen_10dp"-->
+                    <!--            app:cardCornerRadius="@dimen/imageView_corner_radius"-->
+
+                    <ImageView
+                        android:id="@+id/owner_profile_image"
+                        style="@style/form_image"
+                        />
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="match_parent"-->
+                    <!--            android:layout_gravity="center"-->
+                    <!--            android:src="@drawable/user"-->
+                    <!--            android:scaleType="centerCrop"-->
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="6 Invites | 1 Pending"
+                    android:fontFamily="@font/roboto_bold"
+                    style="@style/sub_heading_text_white"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/dimen_40dp"
+                    android:paddingLeft="@dimen/dimen_40dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:paddingBottom="@dimen/dimen_20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/AppTheme.OutLinedInput"
+                        app:hintTextAppearance="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_height="50dp"
+                        android:hint="@string/name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/form_edit_text"
+                            android:id="@+id/owner_profileName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Name"
+                            android:textSize="@dimen/small_text_size"
+                            android:enabled="false"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/AppTheme.OutLinedInput"
+                        app:hintTextAppearance="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/form_edit_text"
+                            android:id="@+id/owner_profileEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:textSize="@dimen/small_text_size"
+                            android:text="customeremail@gmail.com"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/AppTheme.OutLinedInput"
+                        app:hintTextAppearance="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobilenumber">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/form_edit_text_for_phone_field"
+                            android:id="@+id/owner_profileMobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:textSize="@dimen/small_text_size"
+                            android:text="9876543210"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_marginTop="@dimen/dimen_10dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="@string/userType">-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            style="@style/form_edit_text"-->
+<!--                            android:id="@+id/profileUserType"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:enabled="false"-->
+<!--                            android:textSize="@dimen/small_text_size"-->
+<!--                            android:text="User Type"/>-->
+
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/AppTheme.OutLinedInput"
+                        app:hintTextAppearance="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/form_edit_text"
+                            android:id="@+id/owner_profileAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:textSize="@dimen/small_text_size"
+                            android:text="@string/address"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/dimen_10dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/AppTheme.OutLinedInput"
+                            app:hintTextAppearance="@style/HintText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_weight="0.8"
+                            android:hint="License Number">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/owner_licenseNumber"
+                                style="@style/form_edit_text_for_text_capital_field"
+                                android:layout_height="37dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/dimen_5dp">
+
+                            <ImageButton
+                                android:id="@+id/owner_viewLicenseDocbtn"
+                                style="@style/form_side_button"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+                            <ImageButton
+                                android:id="@+id/owner_uploadLicenseDocbtn"
+                                style="@style/form_side_button"
+                                android:src="@drawable/ic_baseline_publish_24" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/dimen_10dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/AppTheme.OutLinedInput"
+                            app:hintTextAppearance="@style/HintText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_weight="0.8"
+                            android:hint="Aadhar Number">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/owner_aadhaarNumber"
+                                style="@style/form_edit_text_for_text_capital_field" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/dimen_5dp">
+
+                            <ImageButton
+                                android:id="@+id/owner_viewAdrDocbtn"
+                                style="@style/form_side_button"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+                            <ImageButton
+                                android:id="@+id/owner_uploadAdrDocbtn"
+                                style="@style/form_side_button"
+                                android:src="@drawable/ic_baseline_publish_24" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/owner_updateProfileButton"
+                        style="@style/medium_button_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Update"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <!--        <com.google.android.material.button.MaterialButton-->
+            <!--            android:id="@+id/btnNextOtpCofirm"-->
+            <!--            style="@style/button_theme"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="@dimen/button_height"-->
+            <!--            android:layout_gravity="bottom"-->
+            <!--            android:text="@string/btn_login"-->
+            <!--            android:layout_marginTop="@dimen/heading_margin_top"-->
+            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintStart_toStartOf="parent">-->
+
+            <!--        </com.google.android.material.button.MaterialButton>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/owner_fabEditProfile"
+        style="@style/fab_style"
+        android:src="@drawable/ic_edit_icon" />
+
+</FrameLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".driver.ui.vehiclelist.VehicleList">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/vehicleListBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/quantum_ic_arrow_back_grey600_24"
+                android:layout_weight="0.1">
+            </ImageView>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/inner_heading_text_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Vehicle List"
+                android:layout_weight="0.8"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVehicleList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        style="@style/fab_style"
+        android:src="@drawable/ic_add_text" />
+
+</FrameLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/driverOverlay_relativelayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+<!--        <ImageView android:layout_width="@dimen/small_image_view_size"-->
+<!--            android:layout_height="@dimen/small_image_view_size"-->
+<!--            android:id="@+id/chathead_img"-->
+<!--            android:src="@drawable/hatchback" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:src="@drawable/ic_baseline_primary_color_close_24"-->
+<!--            android:id="@+id/overlayClose"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginRight="@dimen/dimen_10dp"-->
+<!--            />-->
+
+        <TextView
+            style="@style/heading_text_name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booking"
+            android:layout_margin="0dp"
+            android:paddingLeft="@dimen/dimen_10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                style="@style/search_outer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_4"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/top_padding_right"
+                    android:paddingLeft="@dimen/search_padding_left"
+                    android:paddingBottom="@dimen/top_padding_bottom"
+                    android:paddingTop="@dimen/top_padding_top">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:orientation="vertical"
+                        >
+                        <!--                android:layout_weight="0.1"-->
+                        <ImageView
+                            style="@style/vehicle_photo"
+                            android:layout_width="@dimen/small_image_view_size"
+                            android:layout_height="@dimen/small_image_view_size"
+                            />
+                        <!--                android:src="@drawable/car"-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iv_rideDetails_DriverPhoto"-->
+<!--                            android:layout_width="@dimen/small_image_view_size"-->
+<!--                            android:layout_height="@dimen/small_image_view_size"-->
+<!--                            android:src="@drawable/ic_baseline_account_circle_24"-->
+<!--                            android:layout_marginTop="@dimen/dp_4"-->
+<!--                            />-->
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginRight="@dimen/top_margin_right"
+                        android:layout_marginLeft="@dimen/top_margin_left"
+                        android:orientation="vertical">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPrevDate"
+                            style="@style/content_text_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fri, Mar 08, 9:15AM"/>
+<!--                        <com.google.android.material.textview.MaterialTextView-->
+<!--                            style="@style/content_text_dark_gray"-->
+<!--                            android:id="@+id/tvPrevVehicleNo"-->
+<!--                            android:textSize="@dimen/small_text_size"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Car. DH01A0203 "/>-->
+
+<!--                        <com.google.android.material.textview.MaterialTextView-->
+<!--                            style="@style/content_text_dark_gray"-->
+<!--                            android:textSize="@dimen/small_text_size"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="DriverName"/>-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:orientation="vertical"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/icon_small_width"
+                                        android:layout_height="@dimen/icon_small_height"
+                                        android:layout_weight="0.05"
+                                        android:src="@drawable/pickpu_icon_image" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tvPrevPickup"
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="0.95"
+                                        android:padding="5dp"
+                                        android:text="Pickup Location" />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/icon_small_width"
+                                        android:layout_height="@dimen/icon_small_height"
+                                        android:layout_weight="0.05"
+                                        android:src="@drawable/destination_icon_image" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tvPrevDestination"
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="0.95"
+                                        android:padding="@dimen/dimen_5dp"
+                                        android:text="Destination Location" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPrevCost"
+                            android:textSize="@dimen/small_text_size"
+                            android:textColor="@android:color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            style="@style/content_text_gray"
+                            android:text="Rs.100000">
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <ImageView
+                            android:id="@+id/driverOverlay_callIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_call_24"
+                            app:tint="@color/colorPrimary"/>
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <Button-->
+<!--                                android:id="@+id/acceptBtn"-->
+<!--                                style="@style/small_button_theme"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:visibility="visible"-->
+<!--                                android:text="@string/accept"-->
+<!--                                android:backgroundTint="@color/colorPrimary"-->
+<!--                                />-->
+
+<!--                            <Button-->
+<!--                                android:id="@+id/overlay_rejectBtn"-->
+<!--                                style="@style/small_button_theme"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:visibility="visible"-->
+<!--                                android:text="@string/reject"-->
+<!--                                android:backgroundTint="@color/colorPrimary"/>-->
+
+<!--                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/driver_overlay_reject_btn"
+                        style="@style/medium_button_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:text="Reject"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:layout_marginLeft="@dimen/dp_4"/>
+
+                    <Button
+                        android:id="@+id/driver_overlay_later_btn"
+                        style="@style/medium_button_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/quantum_amber500"
+                        android:text="Later"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:layout_marginLeft="@dimen/dp_4"/>
+
+                    <Button
+                        android:id="@+id/driver_overlay_accept_btn"
+                        style="@style/medium_button_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="Accept"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:layout_marginLeft="@dimen/dp_4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

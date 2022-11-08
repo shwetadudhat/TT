@@ -1,0 +1,766 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TT" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+
+        <!-- Buttons + All theme-->
+        <item name="colorPrimary">#8BC34A</item>
+        <!-- Notification bar-->
+        <item name="colorPrimaryVariant">#689F38</item>
+        <!-- Button Text-->
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <!-- Buttons-->
+        <item name="colorSecondary">#212121</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="rating_bar_color"   parent="android:style/Widget.Material.RatingBar.Small"><!-- parent="Widget.AppCompat.RatingBar.Indicator"-->>
+        <item name="colorSecondary">@color/ratingStar</item>
+
+    </style>
+    <!-- Drawer button-->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/black</item>
+    </style>
+
+    <style name="Theme.TT.NoActionBar">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:color">@android:color/black</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="Theme.TT.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="color">@color/black</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="Theme.TT.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <!--App Name-->
+    <style name="app_text_name" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/app_name_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/heading_color</item>
+    </style>
+
+    <!--Heading-->
+    <style name="heading_text_name" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/heading_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:layout_marginTop">@dimen/heading_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/heading_margin_bottom</item>
+    </style>
+
+    <!--Heading Content-->
+    <style name="heading_text_name1" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/heading_text_size1</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:layout_marginTop">@dimen/heading_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/heading_margin_bottom</item>
+    </style>
+
+
+
+
+    <!--Inner Heading-->
+    <style name="inner_heading_text_name" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:textSize">@dimen/sub_heading_text_size</item>-->
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:layout_marginTop">@dimen/top_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/top_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/top_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/top_margin_right</item>
+    </style>
+
+    <!--Sub sub Heading-->
+    <style name="sub_heading_text_name" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/mid_edit_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/sub_heading_color</item>
+
+    </style>
+
+    <!--Sub Heading black-->
+    <style name="sub_heading_text_black" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:textSize">@dimen/sub_heading_text_size</item>-->
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <!--Sub Heading black14-->
+    <style name="sub_heading_small_text_black" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:textSize">@dimen/sub_heading_text_size</item>-->
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="sub_heading_large_text_black" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/mid_edit_text_size</item>
+        <!--        <item name="android:textSize">@dimen/large_text_size</item>-->
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="sub_heading_text_white" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/mid_edit_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="sub_heading_text_white1" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_small_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+    <!--Content-->
+    <style name="content_text" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:layout_marginTop">@dimen/content_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/content_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/content_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/content_margin_bottom</item>
+    </style>
+
+    <style name="content_text_bold" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/heading_color</item>
+    </style>
+
+    <style name="small_text" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">8sp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Content center text-->
+    <style name="content_text_center" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/content_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/content_margin_bottom</item>
+    </style>
+
+
+    <!--Content center text-->
+    <style name="content_text_bottom" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_small_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/content_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/content_margin_bottom</item>
+    </style>
+
+    <style name="content_text_small_padding" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/top_padding_small</item>
+    </style>
+
+    <style name="content_text_without_margin" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:textSize">@dimen/content_text_size</item>-->
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+
+    <style name="content_text_gray" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:textSize">@dimen/content_text_size</item>-->
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/content_dark_gray_color</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="content_text_color_primary" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:textSize">@dimen/content_text_size</item>-->
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="content_text_black" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:textSize">@dimen/content_text_size</item>-->
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="content_large_text_black" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+<!--X_X_large_text_size-->
+    <style name="content_text_dark_Primary" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <!--        <item name="android:textSize">@dimen/small_text_size</item>-->
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="content_text_dark_gray" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_desc_small_text_size</item>
+        <!--        <item name="android:textSize">@dimen/small_text_size</item>-->
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/content_dark_gray_color</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+    <!--main spinner-->
+    <style name="content_text_dark_gray1" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_small_text_size</item>
+        <!--        <item name="android:textSize">@dimen/small_text_size</item>-->
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/content_dark_gray_color</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+<!--content smaalll-->
+    <style name="content_text_dark_gray_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/content_desc_small_text_size</item>
+        <!--        <item name="android:textSize">@dimen/small_text_size</item>-->
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/content_dark_gray_color</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+    <!--Button theme-->
+    <style name="button_theme" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="small_compressed_button_theme" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:inputType">textCapWords</item>
+        <!--        <item name="android:padding">1dp</item>-->
+        <item name="android:textSize">10sp</item>
+        <!--        <item name="android:layout_height">40dp</item>-->
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="small_button_theme" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="medium_button_theme" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:textSize">@dimen/content_small_text_size</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- OTP Edit Text-->
+    <style name="otp_edit_text" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/input_circle</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/big_edit_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+
+    <!-- Search Edit Text-->
+    <style name="search_edit_text" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/search_edit_text</item>
+        <item name="android:textColor">@android:color/black</item>
+        <!--        <item name="android:textSize">@dimen/mid_edit_text_size</item>-->
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingLeft">@dimen/top_padding_left</item>
+        <item name="android:paddingRight">@dimen/top_padding_right</item>
+    </style>
+
+    <!-- Search Main Activity Location Text-->
+    <style name="main_activity_search_edit_text" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/search_edit_text</item>
+        <item name="android:textColor">@android:color/black</item>
+        <!--        <item name="android:textSize">@dimen/mid_edit_text_size</item>-->
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingLeft">@dimen/top_padding_left</item>
+        <item name="android:paddingRight">@dimen/top_padding_right</item>
+    </style>
+
+    <style name="HintText" parent="Theme.TT">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.MaterialComponents">
+        <item name="android:textColorHint">@color/quantum_grey200</item>
+        <item name="android:textSize">@dimen/content_text_size</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/quantum_grey500</item>
+    </style>
+
+    <!-- Search Edit Text-->
+    <style name="drive_detail_edit" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/search_edit_text</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/mid_edit_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingLeft">@dimen/top_padding_left</item>
+        <item name="android:paddingRight">@dimen/top_padding_right</item>
+        <item name="android:layout_margin">@dimen/dp_4</item>
+    </style>
+
+    <!-- Sderive details Edit Text-->
+    <style name="drive_details_edit_text" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/search_edit_text</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/mid_edit_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingLeft">@dimen/top_padding_left</item>
+        <item name="android:paddingRight">@dimen/top_padding_right</item>
+        <item name="android:layout_marginTop">@dimen/dp_2</item>
+        <item name="android:layout_marginBottom">@dimen/dp_2</item>
+    </style>
+
+
+    <!--slider layout -->
+    <style name="slider_layout" parent="Widget.MaterialComponents.CardView">
+        <!--        <item name="cardCornerRadius">@dimen/button_corner_radius</item>-->
+        <!--        <item name="cardElevation">@dimen/elevation</item>-->
+        <!--        <item name="android:layout_marginTop">@dimen/top_margin_top</item>-->
+        <item name="cardBackgroundColor">#00000000</item>
+        <item name="cardCornerRadius">0dp</item>
+    </style>
+
+    <!-- Search Outer Layout-->
+    <style name="search_outer_layout" parent="Widget.MaterialComponents.CardView">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_height">@dimen/action_bar_height</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/content_small_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxHeight">50dp</item>
+        <item name="cardCornerRadius">5dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:paddingRight">@dimen/search_padding_right</item>
+        <item name="android:paddingLeft">@dimen/search_padding_left</item>
+        <item name="android:paddingTop">@dimen/search_padding_top</item>
+        <item name="android:paddingBottom">@dimen/search_padding_bottom</item>
+        <item name="android:layout_marginRight">@dimen/top_margin_right</item>
+        <item name="android:layout_marginLeft">@dimen/top_margin_left</item>
+    </style>
+
+    <style name="white_button_theme" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/small_button</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginRight">@dimen/top_margin_right</item>
+        <item name="android:paddingLeft">@dimen/top_padding_left</item>
+        <item name="android:paddingRight">@dimen/top_padding_right</item>
+    </style>
+
+    <style name="EditText.Material" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingTop">@dimen/top_padding_top</item>
+        <item name="android:textSize">@dimen/content_text_size</item>
+    </style>
+
+    <!--    Form Edit Text-->
+    <style name="form_edit_text" parent="Base.Widget.MaterialComponents.TextInputLayout"><!--parent="Widget.AppCompat.EditText"-->>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/psn_gds_inputTextField_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+
+    </style>
+
+    <style name="form_edit_text_for_number_field" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/psn_gds_inputTextField_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="form_edit_text_for_decimal_number_field" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/psn_gds_inputTextField_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="form_edit_text_for_date_field" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/psn_gds_inputTextField_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">date</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="form_edit_text_for_phone_field" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/psn_gds_inputTextField_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLength">10</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="form_edit_text_for_text_field" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/psn_gds_inputTextField_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="form_edit_text_for_text_capital_field" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/psn_gds_inputTextField_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">textCapCharacters</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="form_up_arrow_increment" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:src">@drawable/ic_up_arrow</item>
+        <item name="android:background">@drawable/border_rectangle</item>
+    </style>
+
+    <style name="form_down_arrow_increment" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:src">@drawable/ic_down_arrow</item>
+        <item name="android:background">@drawable/border_rectangle</item>
+    </style>
+
+    <style name="form_card_for_image" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">@dimen/imageView_width</item>
+        <item name="android:layout_height">@dimen/imageView_height</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">@dimen/imageView_card_elevation</item>
+        <item name="cardCornerRadius">@dimen/imageView_corner_radius</item>
+        <!--        <item name="android:layout_margin">@dimen/dimen_5dp</item>-->
+    </style>
+
+    <style name="form_image" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/ic_baseline_account_circle_24</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="form_edit_icon_button">
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">top|right</item>
+        <item name="android:src">@drawable/ic_edit_icon</item>
+        <item name="backgroundTint">#00000000</item>
+    </style>
+
+    <style name="form_delete_icon_button">
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">top|right</item>
+        <item name="android:src">@drawable/ic_baseline_delete_24</item>
+        <item name="backgroundTint">#00000000</item>
+    </style>
+
+    <style name="form_cut_icon_button" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">top|left</item>
+        <item name="android:src">@drawable/ic_baseline_close_24</item>
+        <item name="backgroundTint">#00000000</item>
+    </style>
+
+    <style name="form_submit_button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:layout_width">@dimen/_200sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/content_small_text_size</item>
+        <item name="android:layout_margin">@dimen/dimen_10dp</item>
+    </style>
+
+    <style name="form_side_button" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">0.2</item>
+        <item name="android:background">@drawable/border_rectangle</item>
+        <item name="android:padding">@dimen/dimen_10dp</item>
+    </style>
+
+    <!--    TabLayout TextAppearance-->
+    <style name="tab_text_appearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10dp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+
+    </style>
+
+
+    <style name="tab_text_appearance1" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">11dp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+
+    </style>
+
+    <!--    PassangerGoods Tab Text Appearance-->
+    <style name="psg_gds_tab_text_appearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">11sp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <!--    headings-->
+    <style name="medium_heading" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_20dp</item>
+    </style>
+
+    <style name="medium_heading_without_margin" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/heading_color</item>
+    </style>
+
+    <style name="normal_payment_options" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
+    </style>
+
+    <!--material edittext-->
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+      <!--  <item name="materialThemeOverlay">
+            @style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox
+        </item>-->
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/heading_color</item>
+    </style>
+
+
+    <!--    vehicle photo-->
+    <style name="vehicle_photo">
+        <item name="android:src">@drawable/taxi</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!--    horizontal icon card theme-->
+    <style name="horz_icon_card_theme">
+        <item name="android:layout_width">@dimen/horz_icon_card_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/dp_4</item>
+    </style>
+
+    <style name="horz_icon_text_theme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/X_small_text_size</item>
+        <item name="android:textColor">@color/heading_color</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+
+    <!--    medium size profile-->
+    <style name="form_medium_card_for_image" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">@dimen/imageView_card_elevation</item>
+        <item name="cardCornerRadius">37dp</item>
+        <!--        <item name="android:layout_margin">@dimen/dimen_5dp</item>-->
+    </style>
+
+    <style name="form_medium_image" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/ic_baseline_account_circle_24</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!--    dialog close Btn (Image View)-->
+    <style name="dialog_close_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/primary_color_border_circle</item>
+        <item name="android:padding">@dimen/dimen_5dp</item>
+        <item name="android:src">@drawable/ic_baseline_primary_color_close_24</item>
+    </style>
+
+    <!--    swithButton Theme-->
+    <style name="switchButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorSwitchThumbNormal">#D64135</item>
+        <item name="android:colorForeground">#D64135</item>
+    </style>
+
+    <!--    switchTextApperance-->
+    <style name="switch_text_appearance_context_bold">
+        <item name="android:textSize">@dimen/content_small_text_size</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/heading_color</item>
+    </style>
+
+    <!--    Fab Style-->
+    <style name="fab_style" parent="Widget.Design.FloatingActionButton">
+        <item name="android:layout_width">@dimen/fab_size</item>
+        <item name="android:layout_height">@dimen/fab_size</item>
+        <item name="android:layout_gravity">bottom|right</item>
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+<!--        <item name="fabSize">normal</item>-->
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.TT.AppWidgetContainer" parent="">
+        <item name="appWidgetBackgroundColor">@color/light_blue_600</item>
+        <item name="appWidgetTextColor">@color/light_blue_50</item>
+    </style>
+
+
+<!--    Right side Checkbox-->
+    <style name="right_side_checkbox_with_padding">
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">?android:attr/listChoiceIndicatorMultiple</item>
+        <item name="android:paddingLeft">@dimen/dimen_20dp</item>
+        <item name="android:paddingRight">@dimen/dimen_20dp</item>
+        <item name="android:drawableTint">@color/colorPrimary</item>
+        <item name="android:drawablePadding">@dimen/dimen_10dp</item>
+        <item name="android:textSize">@dimen/dimen_10dp</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="right_side_radio_with_padding">
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">?android:attr/listChoiceIndicatorSingle</item>
+        <item name="android:paddingLeft">@dimen/dimen_20dp</item>
+        <item name="android:paddingRight">@dimen/dimen_20dp</item>
+        <item name="android:drawableTint">@color/colorPrimary</item>
+        <item name="android:drawablePadding">@dimen/dimen_10dp</item>
+        <item name="android:textSize">@dimen/dimen_10dp</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+  <!--  Language Spinner-->
+    <style name="language_spinner">
+        <item name="android:layout_gravity">right</item>
+        <item name="android:layout_marginRight">@dimen/dimen_10dp</item>
+        <item name="android:layout_marginBottom">-10dp</item>
+        <item name="android:layout_marginTop">@dimen/dimen_20dp</item>
+        <item name="android:entries">@array/Languages</item>
+        <item name="android:popupBackground">@color/colorPrimary</item>
+       <!-- <item name="android:textSize">@dimen/content_small_text_size</item>-->
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+
+    <style name="msg_text_style">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="msg_time_text_style">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/quantum_grey500</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <style name="addReceiverDetailsIcon">
+        <item name="android:src">@drawable/ic_baseline_add_circle_outline_24</item>
+        <item name="android:tint">@color/red</item>
+    </style>
+
+
+<!--    <color name="gray">C2B9B9</color>-->
+</resources>

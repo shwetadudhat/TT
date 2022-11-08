@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        app:hintTextAppearance="@style/HintText"
+        android:layout_marginTop="@dimen/top_padding_top">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameMobileNo_name"
+            style="@style/form_edit_text_for_text_field" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile Number"
+        app:hintTextAppearance="@style/HintText"
+        android:layout_marginTop="@dimen/top_padding_top">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameMobileNo_mobileNumber"
+            style="@style/form_edit_text_for_phone_field" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

@@ -1,0 +1,224 @@
+<resources>
+    <string name="app_name">Taxi Book</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">0987456123</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="ride_details">Bookings Details</string>
+
+    <string name="driver_booking_history">Driver Booking History</string>
+    <string name="user_booking_history">User Booking History</string>
+
+    <string name="driver_booking">Booking Details</string>
+    <string name="user_booking">Your Bookings</string>
+
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="logout">logout</string>
+    <string name="change_city">Change City</string>
+
+
+    <string name="confirm_text">Are you sure you want to ride now?</string>
+    <!--           Button                -->
+    <string name="btn_get_started">Get Started</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_finish">Finish</string>
+    <string name="btn_select">Select</string>
+    <string name="btn_otp_verify">Verify</string>
+    <string name="btn_otp_permission">Continue</string>
+    <string name="btn_login">Login</string>
+    <string name="customer">Customer</string>
+    <string name="driver">Owner</string>
+    <!--Login Activity-->
+    <string name="login_header">Enter Mobile Number For \nVerification</string>
+    <string name="login_message_top">This Mobile number will be used for all booking related
+communication.</string>
+    <string name="login_message_bottom">By continuing you may receive an sms for\n
+verification. Massage and data rates may apply.</string>
+
+    <!--Otp confirm Activity-->
+    <string name="otp_confirm_header">OTP Verification</string>
+    <string name="otp_confirm_message_top">Wait! we are sending an OTP to verify your
+Mobile Number</string>
+    <string name="otp_input_message_top">Please enter your code here</string>
+
+    <!--Home text-->
+    <string name="search">Search</string>
+    <string name="searchDriver">Search for Driver or Vehicle</string>
+    <string name="pickup_location">Search Pickup Location</string>
+    <string name="desti_location">Search Destination Location</string>
+    <string name="stop_location">(Optional) Search Stop Location</string>
+
+    <!--map api key-->
+    <string name="google_map_api_key">AIzaSyCi-te0QE5Cd92ayN7fCTQx2he2ZmBZwSM</string>
+
+    <!-- DON map api key-->
+    <!--    <string name="google_map_api_key">AIzaSyAQsVSjofHfiWHWqai-0shuFexPke1-NEQ</string>-->
+
+    <string name="recommended">Recommended for you</string>
+    <string name="now">NOW</string>
+    <string name="selet_date_time">Schedule</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_of_passanger">No of Passanger</string>
+    <string name="no_of_bages">No of Bages</string>
+    <string name="alternate_mobile">Alternate Mobile</string>
+    <string name="receiver_name">Receiver Name</string>
+    <string name="receiver_mobile_number">Receiver Mobile No.</string>
+    <string name="remark">Remark</string>
+    <string name="piece">Pieces</string>
+    <string name="size">Size</string>
+    <string name="photo">Photo</string>
+    <string name="selet_photo">Select Photo (Optional)</string>
+    <string name="btn_auto_find">Booking</string>
+    <string name="btn_bidding">Bidding</string>
+    <string name="weight">Load</string>
+    <string name="type">Type</string>
+    <string name="w">Width</string>
+    <string name="h">Height</string>
+    <string name="l">Length</string>
+    <string name="cash">\bCash</string>
+    <string name="passenger">Customer</string>
+
+    <string name="select_payment_mode">Select Payment Mode</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="paytm_pay">Paytm</string>
+    <string name="phone_pay">PhonePe</string>
+    <string name="land_mark">Land Mark</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="call">Call</string>
+    <string name="edit_profile">Profile</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="mobilenumber">Mobile Number</string>
+    <string name="address">Address</string>
+    <string name="userType">User Type</string>
+
+    <string name="driver_name">Driver Name</string>
+    <string name="title_activity_driver">DriverActivity</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="vehicle_list">Vehicle List</string>
+    <string name="review_rating">Review / Rating</string>
+    <string name="caall">Call</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="pickup">pickup</string>
+    <string name="stop">Stop</string>
+    <string name="destination">Destination</string>
+
+    <!--    Goods Type Spinner-->
+    <string name="add_payment_method">Add Payment Method</string>
+
+    <!--    Goods Unit Spinner-->
+    <string name="add_debit_credit_card">Add a Debit/Credit Card</string>
+
+
+    <string name="add_existing_upi_id">Add Existing UPI ID</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="confirm">Confirm</string>
+    <string name="waiting_fee">Waiting Fee</string>
+    <string name="coupon_saving">Coupon Saving</string>
+
+    <string name="coupon_code">CPN123456</string>
+    <string name="rounded_off">Rounded Off</string>
+    <string name="include_tax">Include Taxes</string>
+    <string name="insurance_premium">Insurance Premium</string>
+    <string name="total_payable">Total Payable</string>
+    <string name="use_coupon">USE COUPON</string>
+    <string name="booking_cancel">Booking Cancel</string>
+
+    <string name="booking_cancel_msg_1">Are you sure you want to cancel?</string>
+
+    <string name="plan_changed">Plan Changed</string>
+    <string name="Driver_denied_duty">Driver Denied Duty</string>
+    <string name="unable_to_contact_driver">Unable to Contact Driver</string>
+    <string name="my_account_is_not_listed">My account is not Listed</string>
+    <string name="dont_cancel">"Don't Cancel"</string>
+    <string name="cancel_ride">Cancel Booking</string>
+
+    <string name="going_offline">Going Offline</string>
+    <string name="unable_to_contact_passanger">Unable to Contact Passanger</string>
+    <string name="wrong_details">Wrong Details</string>
+    <string name="vehicle_problem">Vehicle Problem</string>
+
+    <string name="booking_cancelled">Booking Cancelled</string>
+    <string name="booking_cancelled_msg">Your Booking with BID1234564 has been cancelled successfully</string>
+
+    <string name="total_fare">Total Fare $125</string>
+    <string name="pay_ride_end">Pay when the ride ends</string>
+
+    <string name="ride_benifit">1 Ride Benefit Applied</string>
+    <string name="ride_benifit_msg">This ride is insured with Taxi booking insurance. see policy details</string>
+
+    <string name="refer_and_earn">Refers and Earn</string>
+    <string name="your_invites">Your Invites</string>
+    <string name="earned">Earned</string>
+    <string name="pending">Pending</string>
+    <string name="seeall">See All</string>
+    <string name="your_referal_code">Your referral code</string>
+    <string name="share_code">Share Code</string>
+
+    <string name="motorbike">Motor Bike</string>
+    <string name="tuktuk">Tuk Tuk</string>
+    <string name="taxi">Taxi</string>
+    <string name="suv">Suv</string>
+    <string name="pickup_truck">Pickup</string>
+    <string name="minibus">Mini Bus</string>
+    <string name="hatchback">Hatch Back</string>
+    <string name="bus">Bus</string>
+    <string name="box_truck">Box truck</string>
+
+    <string name="coupon_code_txt">Coupon Code</string>
+
+    <string name="permission_giving_msg">Please give the location permission.It is neccessary for properly working.</string>
+
+    <string name="carpool">Carpool</string>
+    <string name="appwidget_text">EXAMPLE</string>
+
+    <string name="add_widget">Add widget</string>
+    <string name="todo">to-do</string>
+    <string-array name="goods_type_list">
+        <item>Type A</item>
+        <item>Type B</item>
+        <item>Type C</item>
+    </string-array>
+    <string-array name="goods_unit_list">
+        <item>KG</item>
+        <item>L</item>
+        <item>Tons</item>
+    </string-array>
+
+    <string-array name="passanger_vehicle_type">
+        <item>Two Wheeler</item>
+        <item>Auto</item>
+        <item>E-Auto</item>
+        <item>Mini Car</item>
+        <item>Sedan</item>
+        <item>Jeep</item>
+        <item>Ambulance</item>
+        <item>Mini Bus</item>
+        <item>Bus</item>
+    </string-array>
+
+    <string-array name="goods_vehicle_type">
+        <item>Loading</item>
+        <item>Mini Truck</item>
+        <item>Truck</item>
+        <item>Trala</item>
+        <item>Tanker</item>
+        <item>Dumper</item>
+        <item>Jugad</item>
+    </string-array>
+
+    <string-array name="Languages">
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Urdu</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_radius_drawable"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="70dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+<!--    android:background="@android:color/transparent"-->
+    <LinearLayout
+        style="@style/slider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--        android:elevation="@dimen/dimen_0dp"-->
+<!--        app:cardElevation="@dimen/dimen_0dp"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/top_padding_top"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@android:color/darker_gray" />-->
+
+                <ImageView
+                    android:id="@+id/destiBtnSheetClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:src="@drawable/ic_baseline_expand_more_24"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/top_padding_bottom"
+                android:orientation="vertical">
+
+
+
+                <!--   <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/stops"/>-->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/search_outer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/action_bar_height_big"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+
+                            android:paddingRight="10dp">
+<!--                            android:paddingLeft="10dp"-->
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_width"
+                                android:layout_height="@dimen/icon_height"
+                                android:layout_marginRight="@dimen/icon_margin_right"
+                                android:layout_marginLeft="@dimen/icon_margin_left"
+                                android:src="@drawable/stops_icon_image"
+                                />
+<!--                            android:layout_weight="0.05"-->
+<!--                            android:paddingRight="4dp"-->
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/etStopLocation"
+                                style="@style/main_activity_search_edit_text"
+                                android:layout_width="0dp"
+                                android:layout_weight=".8"
+                                android:elevation="0dp"
+                                android:hint="@string/stop_location"
+                                android:singleLine="true"
+                                android:visibility="visible"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAddStop"
+                                style="@style/small_button_theme"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.20"
+                                android:enabled="false"
+                                android:text="Add Stop"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/top_margin_left"
+                            android:layout_marginRight="@dimen/top_margin_right"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvSltstopLocationTop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autofillHints="@string/desti_location">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                            <LinearLayout
+                                android:id="@+id/llLocationDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:visibility="gone">
+
+                                <FrameLayout
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/imgLocationCircle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/stops_icon_image" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tvLocationCircl"
+                                        style="@style/small_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="1" />
+
+                                </FrameLayout>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/tvSelectedLocation"
+                                    style="@style/search_edit_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.8"
+                                    android:gravity="center|left|start" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.05"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                    android:id="@+id/imgDelete"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+
+                                    android:background="@drawable/ic_baseline_delete_24"></ImageView>
+<!--                                    android:layout_weight="0.05"-->
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/search_outer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_height_big"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_width"
+                            android:layout_height="@dimen/icon_height"
+                            android:layout_marginLeft="@dimen/icon_margin_left"
+                            android:layout_marginRight="@dimen/icon_margin_right"
+                            android:src="@drawable/destination_icon_image"/>
+<!--                        android:layout_weight="0.06"-->
+<!--                        android:paddingLeft="7dp"-->
+<!--                        android:paddingRight="4dp"-->
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/etDestiUpLocation"
+                            style="@style/main_activity_search_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_weight=".90"
+                            android:elevation="0dp"
+                            android:hint="@string/desti_location"
+                            android:singleLine="true"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPassenger"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/btn_next"
+                android:layout_marginRight="@dimen/top_margin_right"
+                android:layout_marginLeft="@dimen/top_margin_left"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

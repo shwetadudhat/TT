@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/fully_transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/form_dialog_width"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10dp"
+        android:layout_margin="@dimen/dialog_content_margin"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/vmu_title"
+                style="@style/inner_heading_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Update Vehicle" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/addToListBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/vmu_driverAllotmentSinner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/top_margin_left"/>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:id="@+id/driverAllotment"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Driver Allotment">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/vmu_driverAllotmentEdit"-->
+<!--                        style="@style/form_edit_text_for_text_field"-->
+<!--                        android:text="select Driver"-->
+<!--                        android:editable="false"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/AppTheme.OutLinedInput"
+                        app:hintTextAppearance="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="0.8"
+                        android:hint="Driver Allotment">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/vmu_driverAllotmentEdit"
+                            style="@style/form_edit_text_for_text_field"
+                            android:text="select Driver"
+                            android:editable="false"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp">
+
+                        <ImageButton
+                            android:id="@+id/vmu_AddDriverIcon"
+                            style="@style/form_side_button"
+                            android:src="@drawable/ic_baseline_add_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/AppTheme.OutLinedInput"
+                    app:hintTextAppearance="@style/HintText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vmu_VehicleName"
+                        style="@style/form_edit_text_for_text_field"
+                        android:text="Tesla Cyber Truck"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/AppTheme.OutLinedInput"
+                    app:hintTextAppearance="@style/HintText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Vehicle Number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vmu_VehicleNumber"
+                        style="@style/form_edit_text_for_text_capital_field"
+                        android:text="DH12BG1234"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/AppTheme.OutLinedInput"
+                    app:hintTextAppearance="@style/HintText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vmu_VehicleRate"
+                        style="@style/form_edit_text_for_decimal_number_field" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/AppTheme.OutLinedInput"
+                        app:hintTextAppearance="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Available Capacity">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/vmu_Capacity"
+                            style="@style/form_edit_text_for_decimal_number_field"
+                            />
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="match_parent"-->
+                        <!--                        android:padding="@dimen/psn_gds_inputTextField_padding"-->
+                        <!--                        android:maxLines="1"-->
+                        <!--                        android:inputType="numberDecimal"-->
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--                <View-->
+                    <!--                    android:layout_width="@dimen/dp_1"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:background="@android:color/darker_gray" />-->
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:background="@drawable/border_rectangle"
+                        android:layout_marginTop="@dimen/dp_4">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/vmu_mtv_capacityUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="@dimen/top_padding_left"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"
+                            style="@style/content_text_dark_gray1"
+                            android:text="Unit"
+                           />
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:id="@+id/vmu_iv_capacity_unit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_baseline_arrow_drop_down_24">
+                            </ImageView>
+                            <!--                        <androidx.appcompat.widget.AppCompatSpinner-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="match_parent"-->
+
+                            <!--                            android:textSize="@dimen/content_text_size"-->
+                            <!--                            android:entries="@array/goods_unit_list"/>-->
+                            <!--                        android:visibility="gone"-->
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+        <Button
+            android:id="@+id/vmu_updateBtn"
+            style="@style/form_submit_button"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/dialog_close_btn"
+        android:id="@+id/vmu_cutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="@dimen/dimen_10dp">
+
+    <ImageView
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        android:layout_marginRight="@dimen/dimen_20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/drAllotment_driverName"
+            style="@style/content_text_dark_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DriverName"/>
+
+        <TextView
+            style="@style/content_text_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1234567890"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/driverAllotmentTime"-->
+<!--            style="@style/content_text_gray"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="02/08/2020 - 06/09/2020"/>-->
+
+    </LinearLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/driverAllotmentBtn"-->
+<!--        style="@style/small_button_theme"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Allot"/>-->
+
+    <TextView
+        android:id="@+id/driverAllotmentStatus"
+        style="@style/content_text_color_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alloted/Free"/>
+
+</LinearLayout>

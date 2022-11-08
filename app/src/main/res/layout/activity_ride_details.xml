@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/dimen_10dp"
+        >
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+
+        <ImageView
+            android:id="@+id/actirideDetailsBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:src="@drawable/quantum_ic_arrow_back_grey600_24">
+<!--            android:layout_weight="0.1"-->
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:fontFamily="@font/roboto_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/sub_heading_large_text_black"
+                android:text="@string/ride_details" />
+<!--            style="@style/inner_heading_text_name"-->
+<!--            android:layout_weight="0.8"-->
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/content_text_dark_gray1"
+                android:text="BoodingID123456"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/map_route"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <!--        app:layout_constraintBottom_toTopOf="@+id/linearLayout11"-->
+                <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"-->
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/search_outer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="0dp"
+                    app:cardCornerRadius="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/top_margin_left"
+                        android:layout_marginRight="@dimen/top_margin_right">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/medium_heading_without_margin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="08 Sep, 2021 11:23 AM"/>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/medium_heading_without_margin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rs. 720"/>
+
+
+                            </LinearLayout>
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="vertical">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginTop="@dimen/top_padding_top">-->
+
+<!--                                    <com.google.android.material.textview.MaterialTextView-->
+<!--                                        style="@style/content_text_dark_gray"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_gravity="center"-->
+<!--                                        android:text="11:54 AM"-->
+<!--                                        android:textSize="@dimen/small_text_size"-->
+<!--                                        android:layout_marginRight="@dimen/dimen_10dp">-->
+<!--                                    </com.google.android.material.textview.MaterialTextView>-->
+<!--                                    &lt;!&ndash;                                    android:layout_weight="0.2"&ndash;&gt;-->
+
+<!--                                    <ImageView-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_weight="0.02"-->
+<!--                                        android:src="@drawable/pickpu_icon_image" />-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_weight="0.7"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:orientation="vertical"-->
+<!--                                        android:paddingLeft="@dimen/top_padding_left"-->
+<!--                                        android:paddingRight="@dimen/top_padding_right">-->
+
+<!--                                        <com.google.android.material.textview.MaterialTextView-->
+<!--                                            style="@style/content_text_dark_gray"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:text="Lathikata"-->
+<!--                                            android:textSize="@dimen/small_text_size">-->
+<!--                                        </com.google.android.material.textview.MaterialTextView>-->
+
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </LinearLayout>-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    >-->
+<!--                                    &lt;!&ndash;                                    android:layout_marginTop="@dimen/top_padding_top"&ndash;&gt;-->
+
+<!--                                    <com.google.android.material.textview.MaterialTextView-->
+<!--                                        style="@style/content_text_dark_gray"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_gravity="center"-->
+<!--                                        android:textSize="@dimen/small_text_size"-->
+<!--                                        android:layout_marginRight="@dimen/dimen_10dp"-->
+<!--                                        android:text="11:54 AM">-->
+<!--                                    </com.google.android.material.textview.MaterialTextView>-->
+<!--                                    &lt;!&ndash;                                    android:layout_weight="0.2"&ndash;&gt;-->
+<!--                                    <ImageView-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_weight="0.02"-->
+<!--                                        android:src="@drawable/stops_icon_image" />-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_weight="0.7"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:orientation="vertical"-->
+<!--                                        android:paddingLeft="@dimen/top_padding_left"-->
+<!--                                        android:paddingRight="@dimen/top_padding_right">-->
+
+<!--                                        <com.google.android.material.textview.MaterialTextView-->
+<!--                                            style="@style/content_text_dark_gray"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:text="Rourekal"-->
+<!--                                            android:textSize="@dimen/small_text_size">-->
+<!--                                        </com.google.android.material.textview.MaterialTextView>-->
+
+
+<!--                                    </LinearLayout>-->
+
+
+<!--                                </LinearLayout>-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content">-->
+
+<!--                                    <com.google.android.material.textview.MaterialTextView-->
+<!--                                        style="@style/content_text_dark_gray"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_gravity="center"-->
+<!--                                        android:layout_marginRight="@dimen/dimen_10dp"-->
+<!--                                        android:textSize="@dimen/small_text_size"-->
+<!--                                        android:text="11:54 AM">-->
+<!--                                        &lt;!&ndash;                                        android:layout_weight="0.2"&ndash;&gt;-->
+<!--                                    </com.google.android.material.textview.MaterialTextView>-->
+
+<!--                                    <ImageView-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_weight="0.02"-->
+<!--                                        android:src="@drawable/destination_icon_image" />-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:layout_width="0dp"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_weight="0.7"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:orientation="vertical"-->
+<!--                                        android:paddingLeft="@dimen/top_padding_left"-->
+<!--                                        android:paddingRight="@dimen/top_padding_right">-->
+
+<!--                                        <com.google.android.material.textview.MaterialTextView-->
+<!--                                            style="@style/content_text_dark_gray"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:text="Jhirpani"-->
+<!--                                            android:textSize="@dimen/small_text_size">-->
+<!--                                        </com.google.android.material.textview.MaterialTextView>-->
+
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </LinearLayout>-->
+
+<!--                            </LinearLayout>-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/dimen_10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="0.05"
+                                    android:src="@drawable/pickpu_icon_image" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/bid_pickupLocation"
+                                    style="@style/search_edit_text"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.95"
+                                    android:paddingLeft="7dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:text="Kashmir" />
+                            </LinearLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:scrollbars="vertical">
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/bid_rvStopLocation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:autofillHints="@string/desti_location"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+                                    <!--                app:layout_constraintHeight_max="80dp"-->
+
+                                </androidx.recyclerview.widget.RecyclerView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="0.044"
+                                    android:src="@drawable/stops_icon_image" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.956">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="0.5"
+                                        android:paddingBottom="5dp"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingTop="5dp"
+                                        android:text="Indore" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.25"
+                                        android:gravity="right|center_vertical"
+                                        android:text="1h 12m" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.25"
+                                        android:gravity="right|center_vertical"
+                                        android:text="50 km" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="0.044"
+                                    android:src="@drawable/destination_icon_image" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.956">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/bid_destinationLocation"
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="0.5"
+                                        android:paddingBottom="5dp"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingTop="5dp"
+                                        android:text="Madhya Pradesh" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/bid_tvDeLocationTimes"
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.25"
+                                        android:gravity="right|center_vertical"
+                                        android:text="2h 22m" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/bid_tvDeLocationDistance"
+                                        style="@style/search_edit_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.25"
+                                        android:gravity="right|center_vertical"
+                                        android:text="100 km" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/top_padding_top">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.12"
+                                android:src="@drawable/ic_baseline_account_circle_24"></ImageView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.75"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/top_padding_left"
+                                android:paddingRight="@dimen/top_padding_right">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/medium_heading_without_margin"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Anil Solanki"/>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ID #12489"/>
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/content_text_dark_gray_small"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Car-Maruti Car"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray_small"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="You Rated">
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <RatingBar
+                                        style="?android:attr/ratingBarStyleSmall"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/top_margin_left"
+                                        android:numStars="5"
+                                        android:rating="2.5"
+                                        android:stepSize="0.5" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginTop="@dimen/top_margin_top"
+                            android:background="@color/light_gray">
+                        </View>
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center">-->
+
+<!--                            <ImageView-->
+<!--                                style="@style/vehicle_photo"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="@dimen/small_image_view_size"-->
+<!--                                android:layout_weight="0.12"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                >-->
+<!--                                android:layout_weight="0.12"-->
+<!--                                android:src="@drawable/car"-->
+<!--                            </ImageView>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="0.75"-->
+<!--                                android:orientation="vertical">-->
+
+<!--&lt;!&ndash;                                <com.google.android.material.textview.MaterialTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                                    style="@style/content_text"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:text="Car-Maruti Car"/>&ndash;&gt;-->
+
+<!--                            </LinearLayout>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <View-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="@dimen/dp_1"-->
+<!--                            android:layout_marginTop="@dimen/top_margin_top"-->
+<!--                            android:background="@color/light_gray">-->
+<!--                        </View>-->
+
+                        <LinearLayout
+                            android:id="@+id/details_totalamount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/top_padding_top">
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:layout_weight="0.12"-->
+<!--                                android:src="@drawable/ic_baseline_payments_24"></ImageView>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="0.75"-->
+<!--                                android:orientation="vertical">-->
+
+<!--                                <com.google.android.material.textview.MaterialTextView-->
+<!--                                    style="@style/content_text"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="Rs. 720">-->
+<!--                                </com.google.android.material.textview.MaterialTextView>-->
+
+
+<!--                            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dimen_10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/medium_heading_without_margin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rs 42"/>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray_small"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Base Fare"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/medium_heading_without_margin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="8.58 km"/>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray_small"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Distance"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/medium_heading_without_margin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="30 min"/>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray_small"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ride Time"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginTop="@dimen/top_margin_top"
+                            android:background="@color/light_gray"></View>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/content_text_bottom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Congestion time 8 min"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/content_text_dark_gray1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Invoice amount will include any applicable toll taxes"/>
+
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:id="@+id/details_scroll"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:paddingRight="@dimen/dimen_10dp">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:background="@color/light_gray">
+                                </View>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/medium_heading_without_margin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:text="Bill Details">
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:text="Ride Fare">
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.1500" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:text="@string/waiting_fee">
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.10" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:background="@color/light_gray"></View>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:orientation="vertical">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            style="@style/content_text_dark_gray1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/coupon_saving"
+                                            android:fontFamily="@font/roboto_bold">
+<!--                                            android:layout_weight="0.7"-->
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/coupon_code"
+                                            android:textSize="@dimen/small_text_size"/>
+
+                                    </LinearLayout>
+
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.1500" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:text="@string/rounded_off">
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.0.46" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:background="@color/light_gray"></View>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dimen_0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:orientation="vertical">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            style="@style/medium_heading_without_margin"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Total Payabal">
+<!--                                            android:layout_weight="0.7"-->
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/include_tax"
+                                            android:textSize="@dimen/small_text_size"/>
+
+                                    </LinearLayout>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_black"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.1500" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:text="@string/insurance_premium">
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.4" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:background="@color/light_gray"></View>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/medium_heading_without_margin"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:text="@string/total_payable">
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/medium_heading_without_margin"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.1500" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:background="@color/light_gray"/>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/medium_heading_without_margin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Payment">
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/top_margin_top"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="@dimen/top_margin_bottom">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:text="Cash">
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/content_text_dark_gray1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:gravity="right"
+                                        android:text="Rs.1500" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dimen_10dp"
+                >
+                <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintStart_toStartOf="parent"-->
+                <!--        android:layout_marginRight="@dimen/top_margin_right"-->
+                <!--        android:layout_marginLeft="@dimen/top_margin_left"-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/light_gray">
+                </View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/top_margin_left"
+                            android:drawableBottom="@drawable/ic_baseline_local_offer_24"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/X_small_text_size"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/use_coupon">
+                            <!--                android:gravity="center|left"-->
+                            <!--                    android:layout_weight="1"-->
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/bookingDetails_mailInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/top_margin_left"
+                            android:drawableBottom="@drawable/ic_baseline_mail_outline_24"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/X_small_text_size"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text=" MAIL INVOICE">
+                            <!--                android:gravity="center|left"-->
+                            <!--                    android:layout_weight="1"-->
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/bookingDetails_support"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/top_margin_right"
+                            android:drawableBottom="@drawable/ic_baseline_support_24"
+                            android:textSize="@dimen/X_small_text_size"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@android:color/black"
+                            android:text=" SUPPORT">
+                            <!--                    android:layout_weight="1"-->
+                            <!--                android:gravity="center|left"-->
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+</LinearLayout>

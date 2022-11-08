@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/choose_photo_gallery_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/choose_photo_cut_icon"
+            style="@style/form_cut_icon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_10dp" />
+
+        <TextView
+            style="@style/inner_heading_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/choose_photo_gallery_icon"
+        android:layout_width="@dimen/choose_photo_icon_size"
+        android:layout_height="@dimen/choose_photo_icon_size"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:src="@drawable/ic_baseline_insert_photo_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/choose_photo_camera_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/choose_photo_camera_icon"
+        android:layout_width="@dimen/choose_photo_icon_size"
+        android:layout_height="@dimen/choose_photo_icon_size"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_menu_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/choose_photo_gallery_icon"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

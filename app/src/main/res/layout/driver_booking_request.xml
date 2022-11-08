@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="70dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+
+        android:background="@drawable/top_radius_drawable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="500dp"
+            android:paddingBottom="@dimen/top_padding_top"
+            android:orientation="vertical">
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginBottom="@dimen/top_margin_bottom"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_gravity="top|center"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                <FrameLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content">-->
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/search_outer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_weight="0.7">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="12dp"
+                                android:layout_weight="0.08"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="4dp"
+                                android:src="@drawable/ic_baseline_search_24"></ImageView>
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPickUpLocation"
+                                style="@style/search_edit_text"
+                                android:layout_width="0dp"
+                                android:layout_weight=".89"
+                                android:elevation="0dp"
+                                android:hint="@string/searchDriver"
+                                android:singleLine="true"
+                                android:visibility="visible"></com.google.android.material.textfield.TextInputEditText>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="@string/vehicle_list"-->
+<!--                        android:paddingLeft="@dimen/top_padding_left"-->
+<!--                        android:paddingRight="@dimen/top_padding_right"-->
+<!--                        android:layout_marginLeft="@dimen/top_margin_left"-->
+<!--                        android:background="@drawable/border_rectangle"-->
+<!--                        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"-->
+<!--                        android:textColor="@android:color/darker_gray">-->
+<!--                    </TextView>-->
+<!--                    <Spinner-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                </FrameLayout>-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/top_margin_left"
+                    android:layout_marginTop="@dimen/top_margin_top"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin_top"
+                    android:layout_marginLeft="@dimen/top_margin_left"
+                    android:layout_marginRight="@dimen/top_margin_right"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.2"
+                            android:layout_height="match_parent">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.8">
+                            <TextView
+                                style="@style/sub_heading_large_text_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Driver Name">
+                            </TextView>
+                            <TextView
+                                style="@style/sub_heading_large_text_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vehicle Name">
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin_top"
+                    android:layout_marginLeft="@dimen/top_margin_left"
+                    android:layout_marginRight="@dimen/top_margin_right"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <TextView
+                                    style="@style/sub_heading_large_text_black"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.2"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:text="@string/pickup">
+
+                                </TextView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <TextView
+                                    style="@style/sub_heading_large_text_black"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.2"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:text="@string/stop">
+
+                                </TextView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <TextView
+                                    style="@style/sub_heading_large_text_black"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.2"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:text="@string/destination">
+
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin_top"
+                    android:layout_marginLeft="@dimen/top_margin_left"
+                    android:layout_marginRight="@dimen/top_margin_right"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center"
+                        style="@style/small_button_theme"
+                        android:text="@string/accept">
+                    </com.google.android.material.button.MaterialButton>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_30dp"
+                        style="@style/small_button_theme"
+                        android:text="@string/reject">
+                    </com.google.android.material.button.MaterialButton>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_weight="0.15"
+                        android:layout_marginLeft="@dimen/dimen_30dp"
+                        android:gravity="center"
+                        style="@style/small_button_theme"
+                        android:text="@string/call">
+                    </com.google.android.material.button.MaterialButton>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.technlogi.tt">
+
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <application
+        android:name=".ConfigApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TT"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name=".BookingPendingDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" ></activity>
+        <activity
+            android:name=".SupportChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".driver.OwnerProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".common.activity.BookingCancelDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".common.account.GivePermission"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".InvitesList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".IntentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".user.activities.RideBidList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".driver.DriverActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/Theme.TT.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".user.activities.EditProfileActivity"
+            android:parentActivityName=".user.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".user.activities.BookingDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" /> <!-- app:layout_constraintTop_toBottomOf="@+id/linearLayout12" -->
+        <activity
+            android:name=".PermissionReqActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".common.account.OtpVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".user.MainActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".common.account.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar" />
+        <activity
+            android:name=".ExploreActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TT.NoActionBar">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+
+        <receiver android:name=".driver.DriverStatusWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/driver_status_widget_info" />
+        </receiver>
+        <receiver android:name=".common.broadcast.NotificationBroadcast" />
+        <receiver
+            android:name=".common.broadcast.InternetConnectivityChange"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".common.fcm.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".driver.services.ForegroundService"
+            android:enabled="true"
+            android:exported="true" /> <!-- <service android:name=".Overlay" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:foregroundServiceType="mediaProjection" -->
+        <!-- /> -->
+        <service android:name=".FloatingWindow" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+</manifest>
